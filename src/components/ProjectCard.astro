@@ -1,0 +1,101 @@
+---
+import { PROJECT_STATUS } from "../config";
+import type { Project } from "../utils/content";
+import { formatYearMonth } from "../utils/content";
+import { withBase } from "../utils/url";
+import Icon from "./Icon.astro";
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+const status = PROJECT_STATUS[project.data.status as keyof typeof PROJECT_STATUS];
+const href = withBase(`projects/${project.id}/`);
+
+const statusClass = {
+  active: "bg-accent-soft text-accent",
+  done: "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400",
+  muted: "bg-line/60 text-muted",
+}[status.tone] as string;
+
+const period = project.data.endDate
+  ? `${formatYearMonth(project.data.startDate)} – ${formatYearMonth(project.data.endDate)}`
+  : `${formatYearMonth(project.data.startDate)} 至今`;
+---
+
+<article
+  class="group flex flex-col overflow-hidden rounded-xl border border-line bg-card transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/40"
+>
+  <a href={href} class="flex flex-1 flex-col">
+    <div class="relative h-32 shrink-0 overflow-hidden border-b border-line">
+      {
+        project.data.cover ? (
+          <img
+            src={withBase(project.data.cover)}
+            alt=""
+            loading="lazy"
+            class="h-full w-full object-cover"
+          />
+        ) : (
+          <div class="flex h-full w-full items-center justify-center bg-accent-soft">
+            <span class="text-3xl font-semibold text-accent/50" aria-hidden="true">
+              {project.data.name.slice(0, 1).toUpperCase()}
+            </span>
+          </div>
+        )
+      }
+    </div>
+
+    <div class="flex flex-1 flex-col gap-2 p-4">
+      <div class="flex items-center gap-2">
+        <h3 class="text-[1.05rem] font-medium tracking-tight transition-colors group-hover:text-accent">
+          {project.data.name}
+        </h3>
+        <span class={`rounded-md px-2 py-0.5 text-xs ${statusClass}`}>{status.label}</span>
+      </div>
+      <p class="text-sm leading-relaxed text-muted">{project.data.tagline}</p>
+      <div class="mt-auto flex flex-col gap-2 pt-2">
+        <p class="text-xs text-muted">{period}</p>
+        {
+          project.data.stack.length > 0 && (
+            <div class="flex flex-wrap gap-1.5">
+              {project.data.stack.map((tech) => (
+                <span class="rounded-md border border-line px-1.5 py-0.5 text-xs text-muted">{tech}</span>
+              ))}
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </a>
+
+  {
+    (project.data.links.repo || project.data.links.demo) && (
+      <div class="flex items-center gap-1 border-t border-line px-3 py-2">
+        {project.data.links.repo && (
+          <a
+            href={project.data.links.repo}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 rounded-lg px-2 py-1.5 text-xs text-muted transition-colors hover:bg-accent-soft hover:text-accent"
+          >
+            <Icon name="github" size={14} />
+            源码
+          </a>
+        )}
+        {project.data.links.demo && (
+          <a
+            href={project.data.links.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 rounded-lg px-2 py-1.5 text-xs text-muted transition-colors hover:bg-accent-soft hover:text-accent"
+          >
+            <Icon name="external" size={14} />
+            在线预览
+          </a>
+        )}
+      </div>
+    )
+  }
+</article>

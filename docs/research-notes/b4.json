@@ -1,0 +1,67 @@
+[
+ {
+  "url": "https://docs.bearblog.dev/mathematical-notation/",
+  "kws": "math|latex|katex|\\$",
+  "limit": 10
+ },
+ {
+  "url": "https://help.obsidian.md/Editing+and+formatting/Advanced+formatting+syntax",
+  "kws": "math|latex|mathjax|\\$",
+  "limit": 10
+ },
+ {
+  "url": "https://docs.astro.build/sitemap-index.xml",
+  "kws": "math",
+  "limit": 10
+ },
+ {
+  "url": "https://www.getzola.org/sitemap.xml",
+  "kws": "math",
+  "limit": 10
+ },
+ {
+  "url": "https://raw.githubusercontent.com/halo-sigs/plugin-katex/main/README.md",
+  "kws": "katex|halo|install",
+  "limit": 8
+ },
+ {
+  "url": "https://support.substack.com/hc/en-us/search?query=latex",
+  "kws": "latex|math",
+  "limit": 10
+ },
+ {
+  "url": "https://docs.hashnode.com/",
+  "kws": "math|katex|markdown",
+  "limit": 8
+ },
+ {
+  "url": "https://raw.githubusercontent.com/nunocoracao/blowfish/main/config/_default/params.toml",
+  "kws": "math|katex|mathjax",
+  "limit": 8
+ },
+ {
+  "url": "https://raw.githubusercontent.com/nunocoracao/blowfish/main/exampleSite/content/docs/front-matter/index.md",
+  "kws": "math|katex",
+  "limit": 8
+ },
+ {
+  "url": "https://raw.githubusercontent.com/adityatelange/hugo-PaperMod/master/layouts/partials/extend_head.html",
+  "kws": "katex|math",
+  "limit": 5
+ },
+ {
+  "url": "https://raw.githubusercontent.com/alshedivat/al-folio/master/_config.yml",
+  "kws": "math|mathjax|katex",
+  "limit": 10
+ },
+ {
+  "url": "https://raw.githubusercontent.com/cotes2020/jekyll-theme-chirpy/master/_config.yml",
+  "kws": "math|mathjax|katex",
+  "limit": 8
+ },
+ {
+  "url": "https://raw.githubusercontent.com/tangly1024/NotionNext/main/next.config.js",
+  "kws": "katex|math",
+  "limit": 6
+ }
+]

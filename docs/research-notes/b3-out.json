@@ -1,0 +1,272 @@
+[
+ {
+  "url": "https://www.getzola.org/sitemap.xml",
+  "final": "https://www.getzola.org/sitemap.xml",
+  "title": "?",
+  "hits": [
+   "https://www.getzola.org/documentation/content/",
+   "https://www.getzola.org/documentation/content/image-processing/",
+   "https://www.getzola.org/documentation/content/linking/",
+   "https://www.getzola.org/documentation/content/multilingual/",
+   "https://www.getzola.org/documentation/content/overview/",
+   "https://www.getzola.org/documentation/content/page/",
+   "https://www.getzola.org/documentation/content/sass/",
+   "https://www.getzola.org/documentation/content/search/",
+   "https://www.getzola.org/documentation/content/section/",
+   "https://www.getzola.org/documentation/content/syntax-highlighting/",
+   "https://www.getzola.org/documentation/content/table-of-contents/",
+   "https://www.getzola.org/documentation/content/taxonomies/"
+  ],
+  "prices": []
+ },
+ {
+  "url": "https://raw.githubusercontent.com/jerryc127/hexo-theme-butterfly/dev/_config.yml",
+  "final": "https://raw.githubusercontent.com/jerryc127/hexo-theme-butterfly/dev/_config.yml",
+  "title": "?",
+  "hits": [
+   "# Math",
+   "# if you set it to true, it will load mathjax/katex script in each page",
+   "# if you set it to false, it will load mathjax/katex script according to your setting (add the 'mathjax: true' or 'katex: true' in page's front-matter)",
+   "math:",
+   "# Choose: mathjax, katex",
+   "# Leave it empty if you don't need math",
+   "mathjax:",
+   "katex:",
+   "# Enable the copy KaTeX formula",
+   "# katex:",
+   "# katex_copytex:",
+   "# mathjax:"
+  ],
+  "prices": []
+ },
+ {
+  "url": "https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs",
+  "final": "https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs",
+  "title": "FAQs · adityatelange/hugo-PaperMod Wiki · GitHub",
+  "hits": [],
+  "prices": []
+ },
+ {
+  "url": "https://blowfish.page/docs/",
+  "final": "https://blowfish.page/docs/",
+  "title": "Documentation · Blowfish",
+  "hits": [],
+  "prices": []
+ },
+ {
+  "url": "https://raw.githubusercontent.com/nunocoracao/blowfish/main/exampleSite/content/docs/configuration/index.md",
+  "final": "https://raw.githubusercontent.com/nunocoracao/blowfish/main/exampleSite/content/docs/configuration/index.md",
+  "title": "?",
+  "hits": [],
+  "prices": []
+ },
+ {
+  "url": "https://docs.astro.build/en/recipes/add-math/",
+  "error": "HTTP Error 404: Not Found"
+ },
+ {
+  "url": "https://docs.halo.run/",
+  "final": "https://docs.halo.run/",
+  "title": "Halo 文档",
+  "hits": [],
+  "prices": []
+ },
+ {
+  "url": "https://ghost.org/pricing/",
+  "final": "https://ghost.org/pricing/",
+  "title": "Ghost(Pro) - Official managed hosting for Ghost",
+  "hits": [
+   "Monthly billing",
+   "Yearly billing",
+   "Billed yearly",
+   "All Ghost(Pro) sites include a one-year free"
+  ],
+  "prices": [
+   "$ 18",
+   "$ 29",
+   "$ 199",
+   "$50/month addon only available on our",
+   "+ $50/mo"
+  ]
+ },
+ {
+  "url": "https://ghost.org/integrations/katex/",
+  "error": "HTTP Error 404: Not Found"
+ },
+ {
+  "url": "https://wordpress.com/pricing/",
+  "final": "https://wordpress.com/pricing/",
+  "title": "WordPress.com Pricing | Find the Perfect Plan for Your Site",
+  "hits": [
+   "There is a plan for you",
+   "Choose a plan today and unlock a powerful bundle of features. Or start with our free plan .",
+   "WordPress.com Plans",
+   "Pay yearly"
+  ],
+  "prices": [
+   "$ 9",
+   "$ 4",
+   "$ 3.25",
+   "$ 2.75",
+   "$ 18",
+   "$ 8"
+  ]
+ },
+ {
+  "url": "https://wordpress.org/plugins/katex/",
+  "final": "https://wordpress.org/plugins/katex/",
+  "title": "KaTeX – WordPress plugin | WordPress.org",
+  "hits": [
+   "KaTeX",
+   "The KaTeX WordPress plugin enables you to use the fastest TeX math typesetting engine on your WordPress website. You can include TeX inside a [katex]...[/katex] shortcode or in a Gutenberg block. Either way the math will render beautifully on your website. When using Gutenberg blocks, the equations will render immediately inside your editor!",
+   "Equations in blocks or using the [katex display=true]...[/katex] shortcode will render on page in display mode–with bigger symbols–centered on their own line.",
+   "For compatibility with other LaTeX plugins, this plugin optionally supports [latex]...[/latex] shortcodes.",
+   "This plugin includes minified assets provided by the KaTeX project.",
+   "The source code is available in the KaTeX git repository on GitHub .",
+   "Upload the katex folder to your /wp-content/plugins/ directory or automatically download and install the plugin through WordPress’s plugin manager;",
+   "Use the [latex] shortcode or KaTeX Gutenberg blocks in your posts and pages."
+  ],
+  "prices": []
+ },
+ {
+  "url": "https://jetpack.com/support/beautiful-math-with-latex/",
+  "final": "https://jetpack.com/support/beautiful-math-with-latex/",
+  "title": "Beautiful Math with the Math block (formerly known as LaTeX)",
+  "hits": [
+   "Beautiful Math with the Math block (formerly known as LaTeX)",
+   "How to use Math (formerly known as LaTeX) in posts",
+   "Understanding Math error messages",
+   "How to adjust the Math size",
+   "Changing colors in the Math block",
+   "Available Math packages",
+   "The Math block (formerly known as LaTeX) is a powerful markup language for writing complex mathematical equations, formulas, and more. Jetpack combines the power of LaTeX and the simplicity of WordPress to give you the ultimate in maths blogging platforms.",
+   "Follow these steps to enable the Math block:"
+  ],
+  "prices": []
+ },
+ {
+  "url": "https://hashnode.com/pricing",
+  "final": "https://hashnode.com/",
+  "title": "Hashnode — The Best Blogging Platform for Builders in Tech",
+  "hits": [
+   "The blogging platform for developers and engineers. Start a blog for free, sharpen your ideas in public, and build a readership that stays yours.",
+   "The engineer who set up the Terraform project had left the company three months earlier. Nobody had thought to ask where the state file lived.",
+   "A new blog starts at zero authority. Yours starts on a domain search engines trust and AI assistants cite.",
+   "Your own custom domain",
+   "1 post this month",
+   "2 posts this month"
+  ],
+  "prices": []
+ },
+ {
+  "url": "https://obsidian.md/pricing",
+  "final": "https://obsidian.md/pricing",
+  "title": "Pricing - Obsidian",
+  "hits": [
+   "Publish",
+   "Optional add-on services make it easy to sync and publish your notes.",
+   "Yearly",
+   "Monthly",
+   "Per user, per month, billed annually",
+   "Per user, per month, billed monthly"
+  ],
+  "prices": [
+   "$10",
+   "$25",
+   "$50"
+  ]
+ },
+ {
+  "url": "https://help.obsidian.md/syntax",
+  "final": "https://obsidian.md/help/syntax",
+  "title": "Basic formatting syntax - Obsidian Help",
+  "hits": [],
+  "prices": []
+ },
+ {
+  "url": "https://bearblog.dev/",
+  "final": "https://bearblog.dev/",
+  "title": "Bear Blog",
+  "hits": [
+   "Free themes"
+  ],
+  "prices": []
+ },
+ {
+  "url": "https://docs.bearblog.dev/",
+  "final": "https://docs.bearblog.dev/",
+  "title": "Bear docs",
+  "hits": [
+   "Markdown cheatsheet",
+   "Mathematical notation"
+  ],
+  "prices": []
+ },
+ {
+  "url": "https://micro.blog/pricing",
+  "final": "https://micro.blog/about/pricing",
+  "title": "Micro.one",
+  "hits": [
+   "$5 /month",
+   "$10 /month",
+   "$15 /month",
+   "$20 /month"
+  ],
+  "prices": [
+   "Everything you need starts at $5",
+   "$5 /month",
+   "$10 /month",
+   "$15 /month",
+   "$20 /month"
+  ]
+ },
+ {
+  "url": "https://typlog.com/pricing",
+  "final": "https://typlog.com/pricing",
+  "title": "Pricing - Typlog",
+  "hits": [
+   "10k/month",
+   "100k/month",
+   "400k/month",
+   "Your site will not be disabled for traffic spikes. If you exceed your limit consistently on a 3-month rolling average, we'll just let you know that you need an upgrade.",
+   "Our pricing is already affordable, and we offer a 2-month discount for all annual subscriptions.",
+   "We will keep your site active for one month so that you can renew your subscription on time."
+  ],
+  "prices": [
+   "$ 4 /m",
+   "$40 annually,",
+   "saving $8",
+   "$ 8 /m",
+   "$80 annually,",
+   "saving $16"
+  ]
+ },
+ {
+  "url": "https://getpublii.com/",
+  "final": "https://getpublii.com/",
+  "title": "Publii: Free Open-Source Static CMS for Fast, Secure Websites",
+  "hits": [
+   "Publii vs Others Compare Publii with dynamic CMSs like WordPress, Joomla, and Drupal.",
+   "Download Trusted by creators for over 10 years. Create fast, independent websites with a privacy-first static CMS.",
+   "Publii is a free, open-source CMS that runs on your computer, not on a server. You write locally, and Publii builds a static site, which you publish to GitHub Pages, Netlify, Amazon S3, or your own hosting via FTP. No database. No PHP. No admin panel to break into. No tracking scripts unless you add them yourself.",
+   "... I've been interested in static sites for a while now. Publii just caught my eye. The interface is 🔥. Even non-devs can rock this! ...",
+   "... Publii is by far the best way to manage static websites. Best CMS i have seen in a long time! ...",
+   "... Needed to rustle up a simple website so gave Publii a go. It’s a static site CMS and really quite good. ..."
+  ],
+  "prices": []
+ },
+ {
+  "url": "https://writefreely.org/",
+  "final": "https://writefreely.org/",
+  "title": "WriteFreely",
+  "hits": [],
+  "prices": []
+ },
+ {
+  "url": "https://halo.run/",
+  "final": "https://www.halo.run/",
+  "title": "Halo - 强大易用的开源建站工具",
+  "hits": [],
+  "prices": []
+ }
+]

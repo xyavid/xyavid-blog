@@ -1,0 +1,72 @@
+[
+ {
+  "url": "https://theme-next.js.org/docs/third-party-services/math-equations",
+  "kws": "math|katex|mathjax|per_page",
+  "limit": 10
+ },
+ {
+  "url": "https://hexo.io/docs/",
+  "kws": "markdown|renderer|math",
+  "limit": 6
+ },
+ {
+  "url": "https://raw.githubusercontent.com/next-theme/hexo-filter-mathjax/master/README.md",
+  "kws": "math|katex|mathjax|install|npm",
+  "limit": 12
+ },
+ {
+  "url": "https://www.getzola.org/documentation/content/math/",
+  "kws": "math|katex|latex",
+  "limit": 8
+ },
+ {
+  "url": "https://valaxy.site/guide/markdown",
+  "kws": "math|katex|mathjax|公式",
+  "limit": 8
+ },
+ {
+  "url": "https://chirpy.cotes.page/posts/write-a-new-post/",
+  "kws": "math|katex|mathjax|latex",
+  "limit": 8
+ },
+ {
+  "url": "https://blowfish.page/docs/configuration/",
+  "kws": "math|katex|mathjax",
+  "limit": 8
+ },
+ {
+  "url": "https://raw.githubusercontent.com/saicaca/fuwari/main/README.md",
+  "kws": "math|katex|feature|theme|license",
+  "limit": 10
+ },
+ {
+  "url": "https://raw.githubusercontent.com/CuteLeaf/Firefly/master/README.md",
+  "kws": "math|katex|feature|主题|功能",
+  "limit": 12
+ },
+ {
+  "url": "https://raw.githubusercontent.com/radishzzz/astro-theme-retypeset/main/README.md",
+  "kws": "math|katex|feature|字体|font|motion",
+  "limit": 12
+ },
+ {
+  "url": "https://raw.githubusercontent.com/tangly1024/NotionNext/main/README.md",
+  "kws": "katex|math|公式|feature|next",
+  "limit": 10
+ },
+ {
+  "url": "https://raw.githubusercontent.com/halo-dev/halo/main/README.md",
+  "kws": "plugin|market|theme|java|spring",
+  "limit": 10
+ },
+ {
+  "url": "https://butterfly.js.org/sitemap.xml",
+  "kws": "math|katex",
+  "limit": 8
+ },
+ {
+  "url": "https://github.com/adityatelange/hugo-PaperMod/wiki/Features",
+  "kws": "math|katex|mathjax",
+  "limit": 6
+ }
+]

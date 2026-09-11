@@ -1,0 +1,18 @@
+---
+import Pagination from "../../components/Pagination.astro";
+import PostList from "../../components/PostList.astro";
+import SectionHeading from "../../components/SectionHeading.astro";
+import { POSTS_PER_PAGE } from "../../config";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getPublishedPosts } from "../../utils/content";
+
+const posts = await getPublishedPosts();
+const lastPage = Math.max(1, Math.ceil(posts.length / POSTS_PER_PAGE));
+const pagePosts = posts.slice(0, POSTS_PER_PAGE);
+---
+
+<BaseLayout title="文章" description={`共 ${posts.length} 篇文章，按发布时间倒序排列。`}>
+  <SectionHeading title="文章" count={posts.length} description="按发布时间倒序排列。" />
+  <PostList posts={pagePosts} />
+  <Pagination currentPage={1} lastPage={lastPage} basePath="posts" />
+</BaseLayout>

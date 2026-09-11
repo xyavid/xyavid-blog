@@ -1,0 +1,71 @@
+---
+import type { MarkdownHeading } from "astro";
+
+interface Props {
+  headings: MarkdownHeading[];
+}
+
+const { headings } = Astro.props;
+// 只取二级和三级标题，太深的目录反而干扰阅读
+const items = headings.filter((h) => h.depth === 2 || h.depth === 3);
+---
+
+{
+  items.length > 2 && (
+    <nav class="text-sm" aria-label="本文目录">
+      <p class="mb-3 text-xs font-medium tracking-wide text-muted">目录</p>
+      <ul class="flex flex-col gap-0.5 border-l border-line">
+        {items.map((heading) => (
+          <li>
+            <a
+              href={`#${heading.slug}`}
+              data-toc-link={heading.slug}
+              class:list={[
+                "-ml-px flex border-l border-transparent py-1 text-muted transition-colors hover:text-ink",
+                heading.depth === 3 ? "pl-6 text-[0.8rem]" : "pl-3",
+              ]}
+            >
+              {heading.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <script>
+      // 滚动时高亮当前章节：取最后一个已进入视口上方的标题
+      const links = Array.from(document.querySelectorAll<HTMLAnchorElement>("[data-toc-link]"));
+      const targets = links
+        .map((link) => document.getElementById(link.dataset.tocLink ?? ""))
+        .filter((el): el is HTMLElement => el !== null);
+
+      const activeClass = ["text-accent", "border-accent", "font-medium"];
+      const baseClass = ["text-muted", "border-transparent"];
+
+      function highlight() {
+        const offset = window.scrollY + 96;
+        let current = targets[0]?.id ?? "";
+        for (const target of targets) {
+          if (target.offsetTop <= offset) current = target.id;
+          else break;
+        }
+        for (const link of links) {
+          const on = link.dataset.tocLink === current;
+          link.classList.remove(...baseClass, ...activeClass);
+          link.classList.add(...(on ? activeClass : baseClass));
+        }
+      }
+
+      let ticking = false;
+      window.addEventListener("scroll", () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          highlight();
+          ticking = false;
+        });
+      }, { passive: true });
+      highlight();
+    </script>
+  )
+}

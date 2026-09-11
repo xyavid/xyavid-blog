@@ -1,0 +1,132 @@
+[
+ {
+  "url": "https://gohugo.io/content-management/mathematics/",
+  "final": "https://gohugo.io/content-management/mathematics/",
+  "title": "Mathematics in Markdown",
+  "hits": [
+   "QR code linking to https://gohugo.io/content-management/mathematics/",
+   "Mathematics",
+   "Mathematics in Markdown",
+   "Include mathematical equations and expressions in Markdown using LaTeX markup.",
+   "Mathematical equations and expressions written in LaTeX are common in academic and scientific publications. Your browser typically renders this mathematical markup using an open-source JavaScript display engine such as MathJax or KaTeX .",
+   "Whether an equation or expression appears inline, or as a block, depends on the delimiters that surround the mathematical markup. Delimiters are defined in pairs, where each pair consists of an opening and closing delimiter. The opening and closing delimiters may be the same, or different.",
+   "You can configure Hugo to render mathematical markup on the client side using the MathJax or KaTeX display engine, or you can render the markup with the transform.ToMath function while building your project.",
+   "Follow these instructions to include mathematical equations and expressions in your Markdown using LaTeX markup.",
+   "Step 1 Enable and configure the Goldmark passthrough extension in your project configuration. The passthrough extension preserves raw Markdown within delimited snippets of text, including the delimiters themselves. hugo.",
+   "passthrough :",
+   "delimiters :",
+   "math : true"
+  ],
+  "prices": [
+   "I will give you \\\\$2 if you can solve $y = x^2$."
+  ]
+ },
+ {
+  "url": "https://vitepress.dev/guide/markdown",
+  "final": "https://vitepress.dev/guide/markdown",
+  "title": "Markdown Extensions | VitePress",
+  "hits": [
+   "Math Equations",
+   "Math Equations ​",
+   "This is currently opt-in. To enable it, you need to install markdown-it-mathjax3 and set markdown.math to true in your config file:",
+   "sh npm add -D markdown-it-mathjax3@^4",
+   "math: true",
+   "| $\\nabla \\cdot \\vec{\\mathbf{B}} = 0$ | divergence of $\\vec{\\mathbf{B}}$ is zero |"
+  ],
+  "prices": [
+   "| col 3 is | right-aligned | $1600 |",
+   "| col 2 is | centered | $12 |",
+   "| zebra stripes | are neat | $1 |",
+   "$1600",
+   "$12"
+  ]
+ },
+ {
+  "url": "https://docusaurus.io/docs/markdown-features/math-equations",
+  "final": "https://docusaurus.io/docs/markdown-features/math-equations",
+  "title": "Math Equations | Docusaurus",
+  "hits": [
+   "MDX and React Tabs Code blocks Admonitions Headings and Table of contents Assets Markdown links MDX Plugins Math Equations Diagrams Head metadata Styling and Layout Swizzling Static Assets Search Browser support SEO Using Plugins Deployment Internationalization",
+   "Guides Markdown Features Math Equations Version: 3.10.2 On this page",
+   "Math Equations",
+   "Mathematical equations can be rendered using KaTeX .",
+   "Please read the KaTeX documentation for more details.",
+   "Write inline math equations by wrapping LaTeX equations between $ :",
+   "For equation block or display mode, use ```math fenced code blocks.",
+   "```math"
+  ],
+  "prices": []
+ },
+ {
+  "url": "https://squidfunk.github.io/mkdocs-material/reference/math/",
+  "final": "https://squidfunk.github.io/mkdocs-material/reference/math/",
+  "title": "Math - Material for MkDocs",
+  "hits": [
+   "Math",
+   "Math Math Table of contents Configuration MathJax",
+   "KaTeX",
+   "Comparing MathJax and KaTeX",
+   "Table of contents Configuration MathJax",
+   "Math ¶",
+   "MathJax and KaTeX are two popular libraries for displaying mathematical content in browsers. Although both libraries offer similar functionality, they use different syntaxes and have different configuration options. This documentation site provides information on how to integrate them with Material for MkDocs easily.",
+   "The following configuration enables support for rendering block and inline block equations using MathJax and KaTeX ."
+  ],
+  "prices": []
+ },
+ {
+  "url": "https://quartz.jzhao.xyz/features/latex",
+  "final": "https://quartz.jzhao.xyz/features/latex",
+  "title": "LaTeX",
+  "hits": [
+   "LaTeX",
+   "Quartz uses Katex by default to typeset both inline and block math expressions at build time.",
+   "Block Math",
+   "Block math can be rendered by delimiting math expression with $$ .",
+   "Due to limitations in the underlying parsing library , block math in Quartz requires the $$ delimiters to be on newlines like above.",
+   "Inline Math",
+   "Similarly, inline math can be rendered by delimiting math expression with a single $ . For example, $e^{i\\pi} = -1$ produces e iπ = − 1",
+   "There will be cases where you may have more than one $ in a paragraph at once which may accidentally trigger MathJax/Katex."
+  ],
+  "prices": [
+   "Incorrect: I have $1 and you have $2 produces I have 1 an d y o u ha v e 2",
+   "Correct: I have \\$1 and you have \\$2 produces I have $1 and you have $2"
+  ]
+ },
+ {
+  "url": "https://kramdown.gettalong.org/options.html",
+  "final": "https://kramdown.gettalong.org/options.html",
+  "title": "Options | kramdown",
+  "hits": [
+   "Math Engines",
+   "MathJax",
+   "Mathjax-Node",
+   "math_engine",
+   "Set the math engine",
+   "Specifies the math engine that should be used for converting math"
+  ],
+  "prices": []
+ },
+ {
+  "url": "https://jekyllrb.com/docs/configuration/markdown/",
+  "final": "https://jekyllrb.com/docs/configuration/markdown/",
+  "title": "Markdown Options | Jekyll • Simple, blog-aware, static sites",
+  "hits": [
+   "Markdown Options",
+   "The various Markdown renderers supported by Jekyll sometimes have extra options",
+   "Kramdown",
+   "Kramdown is the default Markdown renderer for Jekyll, and often works well with no additional configuration. However, it does support many configuration options.",
+   "Kramdown Processor",
+   "By default, Jekyll uses the GitHub Flavored Markdown (GFM) processor for Kramdown. (Specifying input: GFM is fine, but redundant.) GFM supports a couple additional Kramdown options, documented by kramdown-parser-gfm . These options can be used directly in your Kramdown Jekyll config, like this:",
+   "kramdown :",
+   "You can also change the processor used by Kramdown (as specified for the input key in the Kramdown RDoc ). For example, to use the non-GFM Kramdown processor in Jekyll, add the following to your configuration."
+  ],
+  "prices": []
+ },
+ {
+  "url": "https://www.getzola.org/documentation/getting-started/configuration/",
+  "final": "https://www.getzola.org/documentation/getting-started/configuration/",
+  "title": "Configuration | Zola",
+  "hits": [],
+  "prices": []
+ }
+]

@@ -1,0 +1,112 @@
+[
+ {
+  "url": "https://www.getzola.org/sitemap.xml",
+  "kws": "math|katex|content",
+  "limit": 12
+ },
+ {
+  "url": "https://raw.githubusercontent.com/jerryc127/hexo-theme-butterfly/dev/_config.yml",
+  "kws": "math|katex|mathjax",
+  "limit": 12
+ },
+ {
+  "url": "https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs",
+  "kws": "katex|math",
+  "limit": 8
+ },
+ {
+  "url": "https://blowfish.page/docs/",
+  "kws": "math|katex|mathjax",
+  "limit": 8
+ },
+ {
+  "url": "https://raw.githubusercontent.com/nunocoracao/blowfish/main/exampleSite/content/docs/configuration/index.md",
+  "kws": "math|katex|mathjax",
+  "limit": 10
+ },
+ {
+  "url": "https://docs.astro.build/en/recipes/add-math/",
+  "kws": "math|katex|remark|rehype",
+  "limit": 10
+ },
+ {
+  "url": "https://docs.halo.run/",
+  "kws": "plugin|theme|katex|math",
+  "limit": 8
+ },
+ {
+  "url": "https://ghost.org/pricing/",
+  "kws": "\\$|month|year|price",
+  "limit": 4
+ },
+ {
+  "url": "https://ghost.org/integrations/katex/",
+  "kws": "katex|math|latex",
+  "limit": 8
+ },
+ {
+  "url": "https://wordpress.com/pricing/",
+  "kws": "\\$|month|year|plan",
+  "limit": 4
+ },
+ {
+  "url": "https://wordpress.org/plugins/katex/",
+  "kws": "katex|latex|math|installs",
+  "limit": 8
+ },
+ {
+  "url": "https://jetpack.com/support/beautiful-math-with-latex/",
+  "kws": "latex|math|block|shortcode",
+  "limit": 8
+ },
+ {
+  "url": "https://hashnode.com/pricing",
+  "kws": "\\$|free|month|domain",
+  "limit": 6
+ },
+ {
+  "url": "https://obsidian.md/pricing",
+  "kws": "\\$|publish|month|year",
+  "limit": 6
+ },
+ {
+  "url": "https://help.obsidian.md/syntax",
+  "kws": "math|latex|mathjax|\\$",
+  "limit": 8
+ },
+ {
+  "url": "https://bearblog.dev/",
+  "kws": "\\$|markdown|css|free|month",
+  "limit": 8
+ },
+ {
+  "url": "https://docs.bearblog.dev/",
+  "kws": "markdown|css|math|latex",
+  "limit": 8
+ },
+ {
+  "url": "https://micro.blog/pricing",
+  "kws": "\\$|month|year|free",
+  "limit": 6
+ },
+ {
+  "url": "https://typlog.com/pricing",
+  "kws": "\\$|month|year|plan|免费",
+  "limit": 6
+ },
+ {
+  "url": "https://getpublii.com/",
+  "kws": "markdown|static|cms|desktop",
+  "limit": 6
+ },
+ {
+  "url": "https://writefreely.org/",
+  "kws": "markdown|math|self-host",
+  "limit": 6
+ },
+ {
+  "url": "https://halo.run/",
+  "kws": "\\$|plugin|theme|托管|价格",
+  "limit": 6
+ }
+]

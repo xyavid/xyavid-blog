@@ -1,0 +1,36 @@
+---
+import PostList from "../../components/PostList.astro";
+import SectionHeading from "../../components/SectionHeading.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { countByTag, getPublishedPosts } from "../../utils/content";
+import { withBase } from "../../utils/url";
+
+export async function getStaticPaths() {
+  const posts = await getPublishedPosts();
+  return countByTag(posts).map(({ tag }) => ({
+    params: { tag },
+    props: {
+      tag,
+      posts: posts.filter((post) => post.data.tags.includes(tag)),
+    },
+  }));
+}
+
+const { tag, posts } = Astro.props;
+---
+
+<BaseLayout
+  title={`标签：${tag}`}
+  description={`带有标签「${tag}」的全部文章，共 ${posts.length} 篇。`}
+>
+  <SectionHeading title={`标签：${tag}`} count={posts.length} />
+  <PostList posts={posts} />
+  <div class="mt-10">
+    <a
+      href={withBase("tags/")}
+      class="text-sm text-muted transition-colors hover:text-accent"
+    >
+      ← 返回全部标签
+    </a>
+  </div>
+</BaseLayout>

@@ -1,0 +1,47 @@
+[
+ {
+  "url": "https://blowfish.page/docs/front-matter/",
+  "kws": "math|katex|mathjax",
+  "limit": 8
+ },
+ {
+  "url": "https://www.getzola.org/documentation/content/overview/",
+  "kws": "math|katex",
+  "limit": 8
+ },
+ {
+  "url": "https://hashnode.com/",
+  "kws": "katex|latex|markdown|free|custom domain",
+  "limit": 10
+ },
+ {
+  "url": "https://raw.githubusercontent.com/adityatelange/hugo-PaperMod/master/README.md",
+  "kws": "math|katex|feature",
+  "limit": 8
+ },
+ {
+  "url": "https://ghost.org/help/",
+  "kws": "math|katex|latex",
+  "limit": 6
+ },
+ {
+  "url": "https://docs.bearblog.dev/",
+  "kws": "pricing|price|pro|\\$|domain",
+  "limit": 10
+ },
+ {
+  "url": "https://raw.githubusercontent.com/satnaing/astro-paper/main/README.md",
+  "kws": "katex|math|remark|feature",
+  "limit": 10
+ },
+ {
+  "url": "https://raw.githubusercontent.com/11ty/eleventy/main/README.md",
+  "kws": "markdown|plugin|template",
+  "limit": 6
+ },
+ {
+  "url": "https://raw.githubusercontent.com/halo-dev/halo/main/README.md",
+  "kws": "Java|Spring|plugin|theme|market|Docker",
+  "limit": 10
+ }
+]

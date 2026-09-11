@@ -1,0 +1,168 @@
+[
+ {
+  "url": "https://theme-next.js.org/docs/third-party-services/math-equations",
+  "final": "https://theme-next.js.org/docs/third-party-services/math-equations",
+  "title": "Math Equations | NexT",
+  "hits": [
+   "3. Examples 3.1. Numbering and Referring Equations in MathJax",
+   "Math Equations",
+   "NexT User Docs – Third-party Plugins Integration – Math Equations",
+   "MATH EQUATIONS",
+   "NexT config file # Math Formulas Render Support",
+   "math:",
+   "# Default (false) will load mathjax / katex script on demand.",
+   "# That is it only render those page which has `mathjax: true` in front-matter.",
+   "# If you set it to true, it will load mathjax / katex script EVERY PAGE.",
+   "mathjax:"
+  ],
+  "prices": []
+ },
+ {
+  "url": "https://hexo.io/docs/",
+  "final": "https://hexo.io/docs/",
+  "title": "Documentation | Hexo",
+  "hits": [
+   "Hexo is a fast, simple and powerful blog framework. You write posts in Markdown (or other markup languages) and Hexo generates static files with a beautiful theme in seconds."
+  ],
+  "prices": []
+ },
+ {
+  "url": "https://raw.githubusercontent.com/next-theme/hexo-filter-mathjax/master/README.md",
+  "final": "https://raw.githubusercontent.com/next-theme/hexo-filter-mathjax/master/README.md",
+  "title": "?",
+  "hits": [
+   "# Hexo Filter MathJax",
+   "[![npm-image]][npm-url]",
+   "Server side [MathJax](http://www.mathjax.org/) Renderer Plugin for [Hexo](http://hexo.io/).",
+   "**WARNING: This plugin is a server-side math rendering plugin, which does not depend on any front-end scripts. If you have already enabled other math rendering methods before installing this plugin, please do the following to avoid conflicts:**",
+   "- Remove all other Hexo math plugins",
+   "- Disable front-end math renderer in Hexo theme settings (For theme NexT, you need to set both `math.mathjax.enable` and `math.katax.enable` to `false`)",
+   "- Delete front-end scripts related to math rendering",
+   "## Installation",
+   "[![dm-image]][npm-url]",
+   "[![dt-image]][npm-url]",
+   "$ npm install hexo-filter-mathjax",
+   "mathjax:"
+  ],
+  "prices": []
+ },
+ {
+  "url": "https://www.getzola.org/documentation/content/math/",
+  "error": "HTTP Error 404: Not Found"
+ },
+ {
+  "url": "https://valaxy.site/guide/markdown",
+  "final": "https://valaxy.site/guide/markdown",
+  "title": "Markdown Extensions - VALAXY",
+  "hits": [
+   "Math Formulas",
+   "Unlike Hexo , Valaxy implements some Markdown extensions (such as Container, math formulas) at the framework level, without requiring theme developers to implement them again.",
+   "This is similar to many features of VitePress . Valaxy has borrowed a lot from VitePress and reuses plugins from mdit-vue . However, there are some differences. Valaxy uses KaTeX by default (fast rendering speed), and also supports MathJax (aligned with VitePress, SVG output without external CSS/fonts).",
+   "Note : Do not enable features.katex and math at the same time. They use different rendering engines, and enabling both may cause duplicate rendering or style conflicts. When math (MathJax) is enabled, features.katex will be automatically ignored.",
+   "// KaTeX (enabled by default)",
+   "features: { katex: true },",
+   "// Or switch to MathJax (install first: pnpm add markdown-it-mathjax3)",
+   "// math: true,"
+  ],
+  "prices": []
+ },
+ {
+  "url": "https://chirpy.cotes.page/posts/write-a-new-post/",
+  "final": "https://chirpy.cotes.page/posts/write-a-new-post/",
+  "title": "Writing a New Post | Chirpy",
+  "hits": [
+   "Mathematics",
+   "We use MathJax to generate mathematics. For website performance reasons, the mathematical feature won’t be loaded by default. But it can be enabled by:",
+   "math : true",
+   "After enabling the mathematical feature, you can add math equations with the following syntax:",
+   "Block math should be added with $$ math $$ with mandatory blank lines before and after $$ Inserting equation numbering should be added with $$\\begin{equation} math \\end{equation}$$ Referencing equation numbering should be done with \\label{eq:label_name} in the equation block and \\eqref{eq:label_name} inline with text (see example below) Inline math (in lines) should be added with $$ math $$ withou",
+   "<!-- Block math, keep all blank lines -->",
+   "LaTeX_math_expression",
+   "<!-- Inline math in lines, NO blank lines -->"
+  ],
+  "prices": []
+ },
+ {
+  "url": "https://blowfish.page/docs/configuration/",
+  "final": "https://blowfish.page/docs/configuration/",
+  "title": "Configuration · Blowfish",
+  "hits": [],
+  "prices": []
+ },
+ {
+  "url": "https://raw.githubusercontent.com/saicaca/fuwari/main/README.md",
+  "final": "https://raw.githubusercontent.com/saicaca/fuwari/main/README.md",
+  "title": "?",
+  "hits": [
+   "[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsaicaca%2Ffuwari.svg?type=shield&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsaicaca%2Ffuwari?ref=badge_shield&issueType=license)",
+   "## ✨ Features",
+   "- [x] Customizable theme colors & banner",
+   "- [x] [Markdown extended features](https://github.com/saicaca/fuwari?tab=readme-ov-file#-markdown-extended-syntax)",
+   "In addition to Astro's default support for [GitHub Flavored Markdown](https://github.github.com/gfm/), several extra Markdown features are included:",
+   "## 📄 License",
+   "This project is licensed under the MIT License."
+  ],
+  "prices": []
+ },
+ {
+  "url": "https://raw.githubusercontent.com/CuteLeaf/Firefly/master/README.md",
+  "final": "https://raw.githubusercontent.com/CuteLeaf/Firefly/master/README.md",
+  "title": "?",
+  "hits": [
+   "> 一款清新美观的 Astro 静态博客主题模板",
+   "🎨 现代化设计: 简洁美观的界面，支持自定义主题色",
+   "🔧 高度可配置: 大部分功能模块均可通过配置文件自定义",
+   ">Firefly 是一款基于 Astro 框架和 Fuwari 模板开发的清新美观且现代化个人博客主题模板，专为技术爱好者和内容创作者设计。该主题融合了现代 Web 技术栈，提供了丰富的功能模块和高度可定制的界面，让您能够轻松打造出专业且美观的个人博客网站。",
+   "## ✨ 功能特性",
+   "### 核心功能",
+   "- [x] **主题色自定义** - 360° 色相调节",
+   "如果你有好用的功能和优化，请提交 [Pull Request](https://github.com/CuteLeaf/Firefly/pulls)",
+   "除了 Astro 默认支持的 [GitHub Flavored Markdown](https://github.github.com/gfm/) 之外，还包含了一些额外的 Markdown 功能：",
+   "- 提醒块（Admonitions） - 支持 GitHub, Obsidian, VitePress, Docusaurus 四种风格主题配置 ([预览和用法](https://firefly.cuteleaf.cn/posts/markdown-extended/))"
+  ],
+  "prices": []
+ },
+ {
+  "url": "https://raw.githubusercontent.com/radishzzz/astro-theme-retypeset/main/README.md",
+  "error": "HTTP Error 404: Not Found"
+ },
+ {
+  "url": "https://raw.githubusercontent.com/tangly1024/NotionNext/main/README.md",
+  "final": "https://raw.githubusercontent.com/tangly1024/NotionNext/main/README.md",
+  "title": "?",
+  "hits": [
+   "# NotionNext",
+   "## NotionNext 是什么？",
+   "NotionNext 是一个基于 **Next.js + Notion API** 的开源站点系统。你继续用 Notion 管理文章、分类、标签、菜单和页面，NotionNext 负责把这些内容发布成可访问、可搜索、可运营的独立网站。",
+   "| 搭个人博客 | [从这里开始](https://notionnext.tangly1024.com/user-guide/start-here) | 内容创作者、独立开发者、学生 |",
+   "| 做作品集或个人品牌站 | [按场景选主题](https://notionnext.tangly1024.com/user-guide/themes/THEMES_CATALOG#按场景选主题) | 设计师、摄影师、自由职业者 |",
+   "| 做产品官网或 SaaS 落地页 | [Starter / Landing / Proxio](https://notionnext.tangly1024.com/user-guide/themes/THEMES_CATALOG#按场景选主题) | 创业者、独立产品、小团队 |",
+   "| 做知识库或文档站 | [GitBook / Claude](https://notionnext.tangly1024.com/user-guide/themes/THEMES_CATALOG#按场景选主题) | 开源项目、课程作者、团队文档 |",
+   "| 做导航站或资源聚合 | [Nav 主题](https://notionnext.tangly1024.com/user-guide/themes/nav) | 资源整理者、社群运营者 |",
+   "## 为什么选择 NotionNext？",
+   "2. 复制 NotionNext 官方 Notion 模板。"
+  ],
+  "prices": []
+ },
+ {
+  "url": "https://raw.githubusercontent.com/halo-dev/halo/main/README.md",
+  "final": "https://raw.githubusercontent.com/halo-dev/halo/main/README.md",
+  "title": "?",
+  "hits": [],
+  "prices": []
+ },
+ {
+  "url": "https://butterfly.js.org/sitemap.xml",
+  "final": "https://butterfly.js.org/sitemap.xml",
+  "title": "?",
+  "hits": [],
+  "prices": []
+ },
+ {
+  "url": "https://github.com/adityatelange/hugo-PaperMod/wiki/Features",
+  "final": "https://github.com/adityatelange/hugo-PaperMod/wiki/Features",
+  "title": "Features · adityatelange/hugo-PaperMod Wiki · GitHub",
+  "hits": [],
+  "prices": []
+ }
+]

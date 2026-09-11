@@ -1,0 +1,25 @@
+---
+import ProjectCard from "../../components/ProjectCard.astro";
+import SectionHeading from "../../components/SectionHeading.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getSortedProjects } from "../../utils/content";
+
+const projects = await getSortedProjects();
+---
+
+<BaseLayout title="项目" description="做过和正在做的东西，按时间倒序。">
+  <SectionHeading title="项目" count={projects.length} description="做过和正在做的东西。" />
+  {
+    projects.length > 0 ? (
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {projects.map((project) => (
+          <ProjectCard project={project} />
+        ))}
+      </div>
+    ) : (
+      <p class="rounded-xl border border-dashed border-line px-5 py-12 text-center text-sm text-muted">
+        还没有项目。在 src/content/projects/ 下新建一个 Markdown 文件即可。
+      </p>
+    )
+  }
+</BaseLayout>

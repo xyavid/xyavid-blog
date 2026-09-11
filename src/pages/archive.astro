@@ -1,0 +1,57 @@
+---
+import SectionHeading from "../components/SectionHeading.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { formatDateISO, getPublishedPosts, groupByYearMonth } from "../utils/content";
+import { withBase } from "../utils/url";
+
+const posts = await getPublishedPosts();
+const years = groupByYearMonth(posts);
+---
+
+<BaseLayout title="归档" description="全部文章按时间归档。">
+  <SectionHeading title="归档" count={posts.length} description="全部文章按年月排列。" />
+
+  {
+    years.length === 0 ? (
+      <p class="rounded-xl border border-dashed border-line px-5 py-12 text-center text-sm text-muted">还没有文章。</p>
+    ) : (
+      <div class="flex flex-col gap-10">
+        {years.map((year) => (
+          <section>
+            <h2 class="mb-4 flex items-baseline gap-2 text-lg font-semibold tracking-tight">
+              {year.year}
+              <span class="text-sm font-normal text-muted">{year.count} 篇</span>
+            </h2>
+            <div class="flex flex-col gap-6">
+              {year.months.map((month) => (
+                <div>
+                  <h3 class="mb-2 text-xs font-medium tracking-wide text-muted">{month.month} 月</h3>
+                  <ul class="flex flex-col divide-y divide-line border-t border-line">
+                    {month.posts.map((post) => (
+                      <li>
+                        <a
+                          href={withBase(`posts/${post.id}/`)}
+                          class="group flex items-baseline gap-4 py-2.5 transition-colors"
+                        >
+                          <time
+                            datetime={formatDateISO(post.data.pubDate)}
+                            class="w-16 shrink-0 text-xs tabular-nums text-muted"
+                          >
+                            {formatDateISO(post.data.pubDate).slice(5)}
+                          </time>
+                          <span class="text-sm leading-snug transition-colors group-hover:text-accent">
+                            {post.data.title}
+                          </span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+    )
+  }
+</BaseLayout>

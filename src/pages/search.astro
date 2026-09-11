@@ -1,0 +1,99 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { withBase } from "../utils/url";
+---
+
+<BaseLayout
+  title="搜索"
+  description="在全部文章与项目中按关键词搜索。"
+>
+  <link slot="head" rel="stylesheet" href={withBase("pagefind/pagefind-ui.css")} />
+
+  <div class="mx-auto max-w-3xl">
+    <h1 class="text-2xl font-semibold tracking-tight">搜索</h1>
+    <p class="mt-2 text-sm text-muted">输入关键词，检索全部文章与项目的内容。</p>
+
+    {/* data-ui 让下面的内联脚本知道去哪加载 Pagefind 的界面，避免写死路径 */}
+    <div
+      id="search"
+      class="mt-8"
+      data-ui={withBase("pagefind/pagefind-ui.js")}
+      data-base={import.meta.env.BASE_URL}
+    >
+    </div>
+
+    <p id="search-unavailable" class="mt-8 hidden rounded-xl border border-dashed border-line px-5 py-8 text-sm leading-relaxed text-muted">
+      站内搜索的索引是在构建阶段生成的，开发模式下还没有这份索引。<br />
+      请执行一次 <code>npm run build</code>，然后用 <code>npm run preview</code> 打开本站再看搜索。
+    </p>
+  </div>
+
+  <style is:global>
+    #search {
+      --pagefind-ui-primary: var(--accent);
+      --pagefind-ui-text: var(--fg);
+      --pagefind-ui-background: var(--bg);
+      --pagefind-ui-border: var(--border);
+      --pagefind-ui-tag: var(--accent-soft);
+      --pagefind-ui-border-radius: 10px;
+      --pagefind-ui-font: var(--font-body);
+    }
+    #search .pagefind-ui__search-input {
+      font-size: 0.95rem;
+    }
+    #search .pagefind-ui__result-link {
+      color: var(--accent);
+    }
+    #search .pagefind-ui__result-excerpt {
+      line-height: 1.7;
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var container = document.getElementById("search");
+      var fallback = document.getElementById("search-unavailable");
+      if (!container) return;
+
+      function unavailable() {
+        fallback && fallback.classList.remove("hidden");
+      }
+
+      // Pagefind 索引里存的是根相对路径（/posts/xxx/），部署到子路径时必须补回前缀，
+      // 否则搜出来的结果全部指向 404。
+      var base = container.getAttribute("data-base") || "/";
+
+      var script = document.createElement("script");
+      script.src = container.getAttribute("data-ui") || "";
+      script.onload = function () {
+        if (typeof window.PagefindUI !== "function") {
+          unavailable();
+          return;
+        }
+        new window.PagefindUI({
+          element: "#search",
+          showSubResults: true,
+          showImages: false,
+          processResult: function (result) {
+            if (result && base !== "/" && result.url && result.url.indexOf(base) !== 0) {
+              result.url = base + result.url.replace(/^\/+/, "");
+            }
+            return result;
+          },
+          translations: {
+            placeholder: "搜索文章与项目",
+            clear_search: "清除",
+            load_more: "加载更多结果",
+            search_label: "搜索本站",
+            zero_results: "没有找到与 [SEARCH_TERM] 相关的内容",
+            many_results: "找到 [COUNT] 条与 [SEARCH_TERM] 相关的内容",
+            one_result: "找到 [COUNT] 条与 [SEARCH_TERM] 相关的内容",
+            searching: "搜索中…",
+          },
+        });
+      };
+      script.onerror = unavailable;
+      document.head.appendChild(script);
+    })();
+  </script>
+</BaseLayout>

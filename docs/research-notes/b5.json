@@ -1,0 +1,52 @@
+[
+ {
+  "url": "https://raw.githubusercontent.com/getzola/zola/master/docs/content/documentation/content/math.md",
+  "kws": "math|katex|delimiter",
+  "limit": 12
+ },
+ {
+  "url": "https://raw.githubusercontent.com/getzola/zola/master/CHANGELOG.md",
+  "kws": "katex|math",
+  "limit": 8
+ },
+ {
+  "url": "https://raw.githubusercontent.com/getzola/zola/master/components/config/src/lib.rs",
+  "kws": "math|katex",
+  "limit": 8
+ },
+ {
+  "url": "https://raw.githubusercontent.com/nunocoracao/blowfish/main/layouts/partials/head.html",
+  "kws": "katex|math|mathjax",
+  "limit": 8
+ },
+ {
+  "url": "https://raw.githubusercontent.com/saicaca/fuwari/main/astro.config.mjs",
+  "kws": "math|katex|rehype|remark",
+  "limit": 10
+ },
+ {
+  "url": "https://raw.githubusercontent.com/CuteLeaf/Firefly/master/astro.config.mjs",
+  "kws": "math|katex|rehype|remark",
+  "limit": 10
+ },
+ {
+  "url": "https://raw.githubusercontent.com/satnaing/astro-paper/main/astro.config.ts",
+  "kws": "math|katex|rehype|remark",
+  "limit": 10
+ },
+ {
+  "url": "https://raw.githubusercontent.com/satnaing/astro-paper/main/package.json",
+  "kws": "katex|math|remark",
+  "limit": 10
+ },
+ {
+  "url": "https://docs.halo.run/sitemap.xml",
+  "kws": "katex|math|plugin",
+  "limit": 10
+ },
+ {
+  "url": "https://halo.run/sitemap.xml",
+  "kws": "katex|math|plugin|theme",
+  "limit": 10
+ }
+]

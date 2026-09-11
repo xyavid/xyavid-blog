@@ -1,0 +1,110 @@
+---
+import { NAV, SITE } from "../config";
+import { withBase } from "../utils/url";
+import Icon from "./Icon.astro";
+import ThemeToggle from "./ThemeToggle.astro";
+
+const current = Astro.url.pathname;
+
+function isActive(href: string): boolean {
+  const full = withBase(href);
+  if (href === "/") return current === full || current === withBase("");
+  return current.startsWith(full);
+}
+---
+
+<header
+  class="sticky top-0 z-40 border-b border-line bg-page/85 backdrop-blur-md"
+  data-pagefind-ignore
+>
+  <div class="mx-auto flex h-16 max-w-5xl items-center gap-3 px-5">
+    <a href={withBase("/")} class="mr-auto flex items-center gap-2 text-[0.95rem] font-semibold tracking-tight">
+      <span class="inline-block h-2 w-2 rounded-full bg-accent"></span>
+      <span>{SITE.title}</span>
+    </a>
+
+    <nav class="hidden items-center gap-1 md:flex" aria-label="主导航">
+      {
+        NAV.map((item) => (
+          <a
+            href={withBase(item.href)}
+            aria-current={isActive(item.href) ? "page" : undefined}
+            class:list={[
+              "rounded-lg px-3 py-2 text-sm transition-colors",
+              isActive(item.href)
+                ? "bg-accent-soft font-medium text-accent"
+                : "text-muted hover:text-ink",
+            ]}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="flex items-center gap-1.5">
+      <a
+        href={withBase("search/")}
+        class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-line text-muted transition-colors hover:border-accent hover:text-accent"
+        aria-label="搜索"
+        title="搜索"
+      >
+        <Icon name="search" />
+      </a>
+      <ThemeToggle />
+      <button
+        id="nav-toggle"
+        type="button"
+        class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-line text-muted transition-colors hover:border-accent hover:text-accent md:hidden"
+        aria-label="打开导航菜单"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        <span id="nav-icon-open"><Icon name="menu" /></span>
+        <span id="nav-icon-close" class="hidden"><Icon name="close" /></span>
+      </button>
+    </div>
+  </div>
+
+  <nav id="mobile-nav" class="hidden border-t border-line md:hidden" aria-label="移动端导航">
+    <div class="mx-auto flex max-w-5xl flex-col px-3 py-2">
+      {
+        NAV.map((item) => (
+          <a
+            href={withBase(item.href)}
+            aria-current={isActive(item.href) ? "page" : undefined}
+            class:list={[
+              "rounded-lg px-3 py-3 text-sm transition-colors",
+              isActive(item.href) ? "font-medium text-accent" : "text-muted hover:text-ink",
+            ]}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </div>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.getElementById("nav-toggle");
+  const panel = document.getElementById("mobile-nav");
+  const iconOpen = document.getElementById("nav-icon-open");
+  const iconClose = document.getElementById("nav-icon-close");
+
+  function setOpen(open: boolean) {
+    panel?.classList.toggle("hidden", !open);
+    iconOpen?.classList.toggle("hidden", open);
+    iconClose?.classList.toggle("hidden", !open);
+    toggle?.setAttribute("aria-expanded", String(open));
+  }
+
+  toggle?.addEventListener("click", () => {
+    setOpen(panel?.classList.contains("hidden") ?? false);
+  });
+
+  // 从移动端菜单点走之后，把面板收起来，避免返回时还开着
+  panel?.addEventListener("click", (event) => {
+    if ((event.target as HTMLElement).closest("a")) setOpen(false);
+  });
+</script>

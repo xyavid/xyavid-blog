@@ -1,0 +1,40 @@
+---
+import type { Post } from "../utils/content";
+import { formatDateISO } from "../utils/content";
+import { withBase } from "../utils/url";
+
+interface Props {
+  post: Post;
+  /** 列表页已按分类筛选时，不必重复显示分类 */
+  hideCategory?: boolean;
+}
+
+const { post, hideCategory = false } = Astro.props;
+const href = withBase(`posts/${post.id}/`);
+---
+
+<article class="group relative">
+  <a
+    href={href}
+    class="-mx-3 flex flex-col gap-1.5 rounded-xl px-3 py-4 transition-colors hover:bg-card"
+  >
+    <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted">
+      <time datetime={post.data.pubDate.toISOString()}>{formatDateISO(post.data.pubDate)}</time>
+      {!hideCategory && <span class="text-line">|</span>}
+      {!hideCategory && <span>{post.data.category}</span>}
+    </div>
+    <h3 class="text-[1.05rem] font-medium leading-snug tracking-tight transition-colors group-hover:text-accent">
+      {post.data.title}
+    </h3>
+    <p class="line-clamp-2 text-sm leading-relaxed text-muted">{post.data.description}</p>
+    {
+      post.data.tags.length > 0 && (
+        <div class="mt-1 flex flex-wrap gap-1.5">
+          {post.data.tags.map((tag) => (
+            <span class="rounded-md bg-accent-soft px-2 py-0.5 text-xs text-accent">{tag}</span>
+          ))}
+        </div>
+      )
+    }
+  </a>
+</article>

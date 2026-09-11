@@ -1,0 +1,33 @@
+---
+/**
+ * 明暗主题切换。
+ * 初始值在 BaseLayout 的 <head> 内联脚本里同步设置，避免刷新时闪烁；
+ * 这里只负责点击后的切换与持久化。
+ */
+import Icon from "./Icon.astro";
+---
+
+<button
+  id="theme-toggle"
+  type="button"
+  class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-line text-muted transition-colors hover:border-accent hover:text-accent"
+  aria-label="切换明暗主题"
+  title="切换明暗主题"
+>
+  <span class="dark:hidden"><Icon name="moon" /></span>
+  <span class="hidden dark:inline"><Icon name="sun" /></span>
+</button>
+
+<script>
+  const btn = document.getElementById("theme-toggle");
+  btn?.addEventListener("click", () => {
+    const root = document.documentElement;
+    const next = root.classList.contains("dark") ? "light" : "dark";
+    root.classList.toggle("dark", next === "dark");
+    try {
+      localStorage.setItem("theme", next);
+    } catch (e) {
+      /* 隐私模式下 localStorage 可能不可用，忽略即可 */
+    }
+  });
+</script>

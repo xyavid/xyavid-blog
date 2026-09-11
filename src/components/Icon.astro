@@ -1,0 +1,51 @@
+---
+/**
+ * 内联 SVG 图标。新增图标时在 PATHS 里加一条即可。
+ * 全部用 currentColor 描边，颜色由父元素的文字色决定。
+ */
+interface Props {
+  name: keyof typeof PATHS;
+  size?: number;
+  class?: string;
+}
+const { name, size = 18, class: className = "" } = Astro.props;
+
+const PATHS = {
+  github: "M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.34 1.12 2.91.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.06 10.06 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z",
+  mail: "M3 5.5h18v13H3v-13Zm0 .5 9 6.5 9-6.5",
+  rss: "M5 19a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm-1-5a6 6 0 0 1 6 6M4 9a10 10 0 0 1 10 10",
+  search: "M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm6-2 4 4",
+  sun: "M12 4V2m0 20v-2m8-8h2M2 12h2m13.66-5.66 1.41-1.41M4.93 19.07l1.41-1.41m0-11.32L4.93 4.93m14.14 14.14-1.41-1.41M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z",
+  moon: "M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z",
+  menu: "M4 7h16M4 12h16M4 17h16",
+  close: "M6 6l12 12M18 6 6 18",
+  arrow: "M5 12h14m-6-6 6 6-6 6",
+  external: "M14 4h6v6M20 4l-8 8M18 14v6H4V6h6",
+  calendar: "M7 3v4m10-4v4M3 9h18M4 5h16v16H4V5Z",
+  clock: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0-13v5l3 2",
+  tag: "M3 12V4h8l10 10-8 8L3 12Zm4.5-4.5h.01",
+  folder: "M3 6h6l2 2h10v11H3V6Z",
+  archive: "M3 7h18v4H3V7Zm1 4v9h16v-9M10 12h4",
+  user: "M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-8 9a8 8 0 0 1 16 0",
+  link: "M10 13a4 4 0 0 0 5.66 0l3-3A4 4 0 1 0 13 4.34L11.5 5.8M14 11a4 4 0 0 0-5.66 0l-3 3A4 4 0 1 0 10 19.66L11.5 18.2",
+} as const;
+
+const d = PATHS[name];
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width={size}
+  height={size}
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.7"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class={className}
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d={d}></path>
+</svg>

@@ -1,0 +1,42 @@
+[
+ {
+  "url": "https://gohugo.io/content-management/mathematics/",
+  "kws": "math|katex|mathjax|passthrough|delimiter",
+  "limit": 12
+ },
+ {
+  "url": "https://vitepress.dev/guide/markdown",
+  "kws": "math|katex|mathjax",
+  "limit": 6
+ },
+ {
+  "url": "https://docusaurus.io/docs/markdown-features/math-equations",
+  "kws": "math|katex|remark|rehype",
+  "limit": 8
+ },
+ {
+  "url": "https://squidfunk.github.io/mkdocs-material/reference/math/",
+  "kws": "arithmatex|katex|mathjax|math",
+  "limit": 8
+ },
+ {
+  "url": "https://quartz.jzhao.xyz/features/latex",
+  "kws": "katex|math|latex",
+  "limit": 8
+ },
+ {
+  "url": "https://kramdown.gettalong.org/options.html",
+  "kws": "math_engine|math",
+  "limit": 6
+ },
+ {
+  "url": "https://jekyllrb.com/docs/configuration/markdown/",
+  "kws": "kramdown|math|markdown",
+  "limit": 8
+ },
+ {
+  "url": "https://www.getzola.org/documentation/getting-started/configuration/",
+  "kws": "math|katex",
+  "limit": 5
+ }
+]

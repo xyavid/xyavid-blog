@@ -1,0 +1,160 @@
+== QUERY: Ghost blog KaTeX math support official documentation  [ddg n=10]
+1. Math/science blog - Using Ghost - Ghost Forum | https://forum.ghost.org/t/math-science-blog/30855
+   Hi, does anyone have a math /science blog rendered with Katex as a sample? I've followed various tutorials including comments on this forum but still,
+2. KaTeX - The fastest math typesetting library for the web | https://katex.org/
+   Fast: KaTeX renders its math synchronously and doesn't need to reflow the page. Print quality: KaTeX's layout is based on Donald Knuth's TeX, the gold
+3. Supported Functions - KaTeX | https://katex.org/docs/supported
+   This is a list of TeX functions supported by KaTeX . It is sorted into logical groups. There is a similar Support Table, sorted alphabetically, that l
+
+== QUERY: Hashnode KaTeX math formulas support  [ddg n=10]
+1. LaTeX & KaTeX Math Formula Guide for Markdown | MarkdownAssistant | https://www.markdownassistant.com/en/math
+   MarkdownAssistant math formula guide covers LaTeX/ KaTeX syntax including inline formulas , block formulas , fractions, matrices, integrals, summation
+2. KaTeX - The fastest math typesetting library for the web | https://katex.org/
+   Fast: KaTeX renders its math synchronously and doesn't need to reflow the page. Print quality: KaTeX's layout is based on Donald Knuth's TeX, the gold
+3. Supported Functions - KaTeX | https://katex.org/docs/supported
+   This is a list of TeX functions supported by KaTeX . It is sorted into logical groups. There is a similar Support Table, sorted alphabetically, that l
+
+== QUERY: Substack LaTeX math support announcement  [bing n=5]
+1. Substack | Substack | https://substack.substack.com/
+   Do we have a generation of adult children who are unwilling to just ‘deal with it’ even though those before them did?" Just launched …
+2. Substack 是什么？海外靠付费订阅邮件赚钱的写作平台 | https://www.sohu.com/a/1036194572_122788249
+   Jun 13, 2026 · 但Substack这个海外平台，走的偏偏是一条几乎相反的路。 今天新航出海就来跟你说说它到底特别在哪。 它的核心是" …
+3. My Account - On Substack | https://on.substack.com/account
+   © 2026 Substack · Privacy ∙ Terms ∙ Collection notice Start your Substack Get the app Substack is the home for great culture
+
+== QUERY: Obsidian Publish LaTeX MathJax help  [bing n=10]
+1. Obsidian - Sharpen your thinking | https://obsidian.md/
+   3 days ago · No one else can read them, not even us. Your mind is unique. With thousands of plugins and themes, you can shape …
+2. Download - Obsidian | https://obsidian.md/download
+   Aug 12, 2026 · Obsidian is available on all major platforms. Download Obsidian for iOS, Android, macOS, Windows and Linux.
+3. AI时代，你需要熟悉的核心软件是 Obsidian ， Obsidian 使用 ... | https://zhuanlan.zhihu.com/p/2026071811813643264
+   Apr 10, 2026 · 1. 认识 Obsidian 什么是 Obsidian？ Obsidian 是一款 本地优先 的笔记与知识管理工具，基于 Markdown 文件存储，以 …
+
+== QUERY: Bear Blog features markdown custom CSS  [bing n=10]
+1. bear 是什么意思_ bear 的翻译_音标_读音_用法_例句_爱词霸 ... | https://www.iciba.com/word?w=bear
+   The bear first gained fame after it was spotted wandering around neighborhoods and was caught on videos that were posted on …
+2. bear （英文单词）_百度百科 | https://baike.baidu.com/item/bear/6714037
+   名词“bear”源自古英语“bera”，其原始日耳曼语形式为*bero，字面意为“棕色的（动物）”，与古英语“brūn”（棕色）相关。 动词“bear” …
+3. BEAR 中文 (简体)翻译：剑桥词典 - Cambridge Dictionary | https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/bear
+   I can't bear this stifling humidity. I can't bear it when someone starts ramming their views down your throat. "I can't bear to see good …
+
+== QUERY: WordPress KaTeX math block plugin  [bing n=10]
+1. 博客工具、发布平台和内容管理系统 – WordPress .org China ... | https://cn.wordpress.org/
+   The WordPress® trademark is the intellectual property of the WordPress Foundation.
+2. Download – WordPress .org | https://wordpress.org/download/
+   WordPress combines simplicity for users and publishers with under-the-hood complexity for developers. Discover the features that …
+3. WordPress 完全教程：从入门到进阶（2026 最新版） | https://blog.csdn.net/m0_61520601/article/details/159928078
+   Apr 7, 2026 · 一、WordPress 是什么？为什么选它？ WordPress 是全球使用最广泛的建站系统（CMS），截至 2026 年， 全球超过 …
+
+== QUERY: NotionNext KaTeX 数学公式 配置  [bing n=10]
+1. NotionNext -快速免费建站 | Notion开源、免费、快速建站 | https://docs.tangly1024.com/about
+   Apr 10, 2010 · NotionNext 是一款基于 Notion API 和 Next.js 的免费开源建站工具。 无需服务器，也不需要复杂后台，即可把 Notion …
+2. GitHub - notionnext -org/ NotionNext : Turn your Notion … | https://github.com/notionnext-org/NotionNext
+   NotionNext 是什么？ NotionNext 是一个基于 Next.js + Notion API 的开源站点系统。 你继续用 Notion 管理文章、分类、标签、菜单 …
+3. 从这里开始 | NotionNext 使用说明 | https://notionnext.tangly1024.com/user-guide/start-here
+   3 days ago · 为什么不用 Notion 公共页面？ Notion 公共页面适合分享单页内容；NotionNext 更适合长期运营独立站。 你可以使用自 …
+
+== QUERY: Halo 博客 KaTeX 数学公式 插件  [bing n=10]
+1. Halo - 强大易用的开源建站工具 | https://www.halo.run/
+   4 days ago · Cartly 是一款面向 Halo 商城场景的现代化主题，适合品牌官网、内容电商和独立店铺。 它提供完整的商城页面流程，同 …
+2. 光环（美国微软公司于2001年推出的第一人称射击游戏 ... | https://baike.baidu.com/item/%E5%85%89%E7%8E%AF/3894481
+   Nov 15, 2001 · 《光环》（HALO）是Bungie开发、微软发行的游戏系列。 第一部作品是于2001年11月15日在XBOX平台发行的第一人 …
+3. Halo - Official Site (en) | https://www.halowaypoint.com/
+   HaloWaypoint.com is the official site for the Halo universe, featuring the latest information about Halo games and media, news from …
+
+== QUERY: Ghost pricing 2026 official plans  [bing n=10]
+1. 一键 GHOST 备份还原工具下载-一键 GHOST 官方下载-PC下载网 | https://www.pcsoft.com.cn/soft/194397.html
+   Apr 23, 2026 · 一键GHOST是一款功能强大的系统备份与恢复工具，支持一键备份和恢复系统。 一键GHOST提供了中文向导，支 …
+2. 曾经风靡一时的 ghost 系统，为什么销声匿迹了？ - 知乎 | https://www.zhihu.com/question/600905979
+   Ghost 主要还是 BIOS + MBR 的引导技术。 这套东西已经过时了很久很久了。 虽然 Ghost 11.0 开始支持 GPT 磁盘，但是没有完全支 …
+3. GHOST 使用教程(图解)_ghost11.5.1教程-CSDN博客 | https://blog.csdn.net/WINGS8/article/details/125908308
+   文章浏览阅读10w+次，点赞52次，收藏316次。 本文详细介绍了如何使用Ghost 11.5.1进行分区备份，包括选择本地操作、ToImage镜 …
+
+== QUERY: WordPress.com pricing plans 2026  [bing n=10]
+1. 博客工具、发布平台和内容管理系统 – WordPress .org China ... | https://cn.wordpress.org/
+   The WordPress® trademark is the intellectual property of the WordPress Foundation.
+2. Download – WordPress .org | https://wordpress.org/download/
+   WordPress combines simplicity for users and publishers with under-the-hood complexity for developers. Discover the features that …
+3. WordPress 完全教程：从入门到进阶（2026 最新版） | https://blog.csdn.net/m0_61520601/article/details/159928078
+   Apr 7, 2026 · 一、WordPress 是什么？为什么选它？ WordPress 是全球使用最广泛的建站系统（CMS），截至 2026 年， 全球超过 …
+
+== QUERY: Hashnode pricing plans free custom domain  [bing n=10]
+1. BMW M240i双门轿跑车 - xDrive四驱运动轿跑 | BMW 中国官网 | https://www.bmw.com.cn/zh/all-models/m-series/m240i/2024/inspire.html
+   BMW M240i双门轿跑车以374马力和xDrive智能四驱，在运动与日常间找到完美平衡。39.8-41.8万起的亲民价格，享受准M级性能体 …
+2. 2026 年 240 水冷横评：利民 CORE MATRIX、瓦尔基里 ... | https://post.smzdm.com/p/akovlr39/
+   Jan 27, 2026 · 2026 年 240 水冷横评：利民 CORE MATRIX、瓦尔基里 GLA240、钛钽 SJ-A090、九州风神冰果240谁更强？
+3. 利民 240 水冷真实体验：颜值能打，但这些情况千万别买 | https://post.smzdm.com/p/a6z78dgn/
+   Apr 8, 2026 · 先说结论：利民240 ARGB（以Frozen Magic 240 V2或AQUA ELITE 240为代表）在压制i5-13600KF、R7 7700X这类中 …
+
+== QUERY: 2026 个人博客 搭建方案 推荐 对比  [bing n=9]
+1. 2026 年日历全年完整图_带农历节假日放假安排_高清可打印 ... | https://rili.zzhuangli.com/year/2026
+   2026年日历全年完整图，带农历、二十四节气、传统节日、周数和放假调休安排，支持30套主题、图片下载及A4年历打印。
+2. 第20届亚运会_体育_央视网 (cctv.com) | https://yayun.cctv.com/2026/index.shtml
+   1 day ago · 第20届亚运会将于2026年9月19日至10月4日在日本爱知·名古屋举行，央视网搭建亚运会全端专题，聚焦亚运赛事动态、 …
+3. 2026 年政府工作报告解读_中国政府网 | https://www.gov.cn/zhuanti/2026qglh/2026zfgzbgjd/
+   Mar 5, 2026 · 四、2026年政府工作任务 党中央对今年工作作出了全面部署，我们要深入贯彻落实，扎实做好各项工作。 （一）着力 …
+
+== QUERY: Hexo 数学公式 KaTeX 渲染 hexo-filter-mathjax  [bing n=10]
+1. Hexo | https://hexo.io/zh-cn/
+   2025-10-26 hexo 8.1.0 Released 2025-09-16 hexo 8.0.0 Released 2024-07-02 hexo 7.3.0 Released
+2. 文档 - Hexo | https://hexo.io/zh-cn/docs/
+   Sep 3, 2026 · 什么是 Hexo？ Hexo 是一个快速、简洁且高效的博客框架。 Hexo 使用 Markdown （或其他标记语言）解析文章，在几 …
+3. 使用 Hexo +GitHub 搭建个人免费博客教程（小白向） | https://zhuanlan.zhihu.com/p/60578464
+   Mar 26, 2019 · 前言近些年来很多用户都喜欢使用 GitHub Pages 来搭建 Hexo 静态博客网站，其最吸引人的莫过于完全免费使用，并 …
+
+== QUERY: VitePress math equations markdown official  [bing n=10]
+1. 快速开始 | VitePress | https://vitepress.dev/zh/guide/getting-started
+   源文件 .vitepress 目录之外的 Markdown 文件被视为 源文件。 VitePress 使用 基于文件的路由：每个 .md 文件将在相同的路径被编译 …
+2. VitePress | 由 Vite 和 Vue 驱动的静态站点生成器 | https://vitejs.cn/vitepress/
+   Sep 3, 2024 · VitePress 由 Vite 和 Vue 驱动的静态站点生成器 将 Markdown 变成优雅的文档，只需几分钟
+3. VitePress | https://vitepress.dev/
+   VitePress is a Vite & Vue powered static site generator that lets you create beautiful documentation sites from Markdown.
+
+== QUERY: Zola math KaTeX documentation  [bing n=10]
+1. DeepSeek Platform | https://platform.deepseek.com/api_keys
+   Join DeepSeek API platform to access our AI models, developer resources and API documentation.
+2. DeepSeek 招聘 | https://talent.deepseek.com/
+   4 days ago · DeepSeek 招聘 © 2026 杭州深度求索人工智能基础技术研究有限公司 版权所有
+3. DeepSeek Harness developer preview: Everything is a plugin | https://www.deepseek.com/harness/en/
+   Aug 27, 2026 · DeepSeek Harness is now in developer preview for agent harness developers worldwide — source code included. …
+
+== QUERY: Hugo Blowfish theme KaTeX features  [bing n=10]
+1. 入门指南 | Hugo 官方文档 | https://hugo.opendocs.io/getting-started/
+   1 day ago · 在您选择的操作系统上安装Hugo的快速入门指南和向导。 如果您是第一次使用Hugo并且已经在您的设备上 安装 …
+2. Gohugo - The world's fastest framework for building websites | https://gohugo.io/
+   1 day ago · Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes …
+3. 构建网站的全球最快框架 | Hugo 框架 | https://gohugo.com.cn/
+   Jan 17, 2025 · 短代码 Hugo 的短代码是 Markdown 隐藏的超能力。 我们喜欢 Markdown 语法的简洁之美，但有时我们希望有更大的 …
+
+== QUERY: Astro Firefly 主题 博客 功能  [bing n=10]
+1. Astro | https://astro.build/
+   Used by the largest companies around the world: What is Astro? Astro is a JavaScript web framework optimized for building fast, …
+2. Astro 框架 | https://astro.js.cn/
+   Jul 31, 2025 · Astro 是什么？ Astro 是一个为构建快速、内容驱动的网站而优化的 JavaScript Web 框架。 服务器优先 Astro 通过在服 …
+3. 入门指南 | Docs | https://docs.astro.build/zh-cn/getting-started/
+   开始一个新项目 ... 我们的 安装指南 提供了使用 CLI 向导安装 Astro、从现有的 Astro GitHub 仓库创建新项目以及手动安装 Astro 的逐 …
+
+== QUERY: Hexo theme Keep 简约 主题  [bing n=10]
+1. Hexo | https://hexo.io/zh-cn/
+   2025-10-26 hexo 8.1.0 Released 2025-09-16 hexo 8.0.0 Released 2024-07-02 hexo 7.3.0 Released
+2. 文档 - Hexo | https://hexo.io/zh-cn/docs/
+   Sep 3, 2026 · 什么是 Hexo？ Hexo 是一个快速、简洁且高效的博客框架。 Hexo 使用 Markdown （或其他标记语言）解析文章，在几 …
+3. 使用 Hexo +GitHub 搭建个人免费博客教程（小白向） | https://zhuanlan.zhihu.com/p/60578464
+   Mar 26, 2019 · 前言近些年来很多用户都喜欢使用 GitHub Pages 来搭建 Hexo 静态博客网站，其最吸引人的莫过于完全免费使用，并 …
+
+== QUERY: Jekyll kramdown math_engine MathJax documentation  [bing n=10]
+1. 欢迎 - Jekyll • 简单静态博客网站生成器 | https://jekyllcn.com/docs/home/
+   Dec 28, 2016 · 该站点的目标是成为 Jekyll 的全面指南。 包括一些内容如：搭建和运行你的站点、创建以及管理内容、定制站点的展 …
+2. Jekyll • Simple, blog-aware, static sites | Transform your plain text ... | https://jekyllrb.com/
+   Jun 22, 2026 · Jekyll is lovingly maintained by the core team of volunteers. The contents of this website are © 2026 under the terms …
+3. Github Pages + jekyll 全面介绍极简搭建个人网站和博客 | https://zhuanlan.zhihu.com/p/51240503
+   Oct 11, 2019 · 本文，将会全面介绍一下如何使用Github Pages + jekyll搭建个人站点。 所谓 极简的意思，就是不用使用git和本地构 …
+
+== QUERY: best blogging platform for developers 2026  [bing n=10]
+1. best 是什么意思_ best 的翻译_音标_读音_用法_例句_爱词霸 ... | https://www.iciba.com/word?w=best
+   This was not a volunteer soldier, not someone well paid, but an average guy, up against the best trained, best equipped, fiercest, …
+2. best （英语单词）_百度百科 | https://baike.baidu.com/item/best/13680727
+   常见短语包含all the best（祝一切顺利）、best friend（好友）、try one's best（尽最大努力）等固定表达，并衍生出best bet（最佳 …
+3. BEST 中文 (简体)翻译：剑桥词典 - Cambridge Dictionary | https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/best
+   In a sport such as tennis, if you play the best of a particular number of games, you play that number of games and the winner is the …
+

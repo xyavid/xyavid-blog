@@ -1,0 +1,40 @@
+---
+import PostList from "../../components/PostList.astro";
+import SectionHeading from "../../components/SectionHeading.astro";
+import { CATEGORIES } from "../../config";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getPublishedPosts } from "../../utils/content";
+import { withBase } from "../../utils/url";
+
+export async function getStaticPaths() {
+  const posts = await getPublishedPosts();
+  // 只给有文章的分类生成页面，避免出现空页面
+  return CATEGORIES.filter((category) =>
+    posts.some((post) => post.data.category === category)
+  ).map((category) => ({
+    params: { category },
+    props: {
+      category,
+      posts: posts.filter((post) => post.data.category === category),
+    },
+  }));
+}
+
+const { category, posts } = Astro.props;
+---
+
+<BaseLayout
+  title={`分类：${category}`}
+  description={`分类「${category}」下的全部文章，共 ${posts.length} 篇。`}
+>
+  <SectionHeading title={`分类：${category}`} count={posts.length} />
+  <PostList posts={posts} hideCategory />
+  <div class="mt-10">
+    <a
+      href={withBase("categories/")}
+      class="text-sm text-muted transition-colors hover:text-accent"
+    >
+      ← 返回全部分类
+    </a>
+  </div>
+</BaseLayout>

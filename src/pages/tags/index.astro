@@ -1,0 +1,32 @@
+---
+import SectionHeading from "../../components/SectionHeading.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { countByTag, getPublishedPosts } from "../../utils/content";
+import { withBase } from "../../utils/url";
+
+const posts = await getPublishedPosts();
+const tags = countByTag(posts);
+const max = Math.max(1, ...tags.map((t) => t.count));
+---
+
+<BaseLayout title="标签" description="按关键词浏览文章。">
+  <SectionHeading title="标签" count={tags.length} description="字号越大表示该标签下的文章越多。" />
+  {
+    tags.length === 0 ? (
+      <p class="rounded-xl border border-dashed border-line px-5 py-12 text-center text-sm text-muted">还没有标签。</p>
+    ) : (
+      <div class="flex flex-wrap items-baseline gap-x-4 gap-y-3">
+        {tags.map(({ tag, count }) => (
+          <a
+            href={withBase(`tags/${encodeURIComponent(tag)}/`)}
+            class="text-muted transition-colors hover:text-accent"
+            style={`font-size: ${(0.875 + (count / max) * 0.5).toFixed(2)}rem`}
+          >
+            {tag}
+            <span class="ml-1 text-xs text-line">{count}</span>
+          </a>
+        ))}
+      </div>
+    )
+  }
+</BaseLayout>

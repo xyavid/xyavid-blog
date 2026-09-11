@@ -1,0 +1,42 @@
+---
+import { getEntry, render } from "astro:content";
+import Icon from "../components/Icon.astro";
+import { SOCIAL } from "../config";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const entry = await getEntry("about", "about");
+if (!entry) {
+  throw new Error("找不到 src/content/about.md，请确认文件存在。");
+}
+const { Content } = await render(entry);
+---
+
+<BaseLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  index
+>
+  <div class="mx-auto max-w-3xl">
+    <h1 class="text-2xl font-semibold tracking-tight" data-pagefind-meta="title">{entry.data.title}</h1>
+
+    <div class="mt-5 flex items-center gap-1">
+      {
+        SOCIAL.map((item) => (
+          <a
+            href={item.href.startsWith("/") ? import.meta.env.BASE_URL + item.href.replace(/^\//, "") : item.href}
+            class="inline-flex h-9 items-center gap-1.5 rounded-lg border border-line px-3 text-xs text-muted transition-colors hover:border-accent hover:text-accent"
+            aria-label={item.label}
+            rel="noopener noreferrer"
+          >
+            <Icon name={item.icon} size={15} />
+            {item.label}
+          </a>
+        ))
+      }
+    </div>
+
+    <article class="prose mt-10">
+      <Content />
+    </article>
+  </div>
+</BaseLayout>
