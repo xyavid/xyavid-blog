@@ -58,7 +58,7 @@ const projects = defineCollection({
         demo: z.string().optional(),
       })
       .default({}),
-    /** 封面图路径（放 public/ 下，如 "/images/projects/orbit.png"）；不填则显示占位块 */
+    /** 封面图路径（放 public/ 下，如 "/images/projects/cover.png"）；不填则显示占位块 */
     cover: z.string().optional(),
     /** true 时出现在首页精选 */
     featured: z.boolean().default(false),

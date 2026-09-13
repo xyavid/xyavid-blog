@@ -6,7 +6,8 @@ import { withBase } from "../utils/url";
 
 export const GET: APIRoute = async (context) => {
   const posts = await getPublishedPosts();
-  const site = context.site ?? new URL("https://example.com");
+  // 频道地址要带上 base 前缀，否则部署到子路径后 <link> 指向站点根，是 404
+  const site = new URL(withBase("/"), context.site ?? "https://example.com");
 
   return rss({
     title: SITE.title,

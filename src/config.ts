@@ -35,8 +35,7 @@ export const NAV = [
  * 不需要的直接删掉整行；想加就照着格式补一条（icon 可选值见 src/components/Icon.astro）。
  */
 export const SOCIAL = [
-  { label: "GitHub", href: "https://github.com/yourname", icon: "github" },
-  { label: "邮箱", href: "mailto:you@example.com", icon: "mail" },
+  { label: "GitHub", href: "https://github.com/xyavid", icon: "github" },
   { label: "RSS", href: "/rss.xml", icon: "rss" },
 ] as const;
 

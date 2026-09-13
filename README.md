@@ -210,7 +210,6 @@ import "katex/dist/katex.min.css";
 
 - `site.config.mjs` —— 部署地址（用 GitHub Actions 时可不改）
 - `src/config.ts` —— 站点名、描述、作者、社交链接、主题色相
-- `src/content/projects/` 下 3 个文件 —— **都是示例项目**（Orbit / Lumen / Playground），请替换成你自己的
 - `src/content/about.md` —— 自我介绍
 - `src/content/posts/` 下 4 篇文章 —— 示例文章，可删可改（其中 `draft-example.md` 是草稿示例）
 - `public/favicon.svg` —— 站点图标
