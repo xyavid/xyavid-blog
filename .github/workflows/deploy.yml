@@ -24,16 +24,18 @@ jobs:
       - name: 检出代码
         uses: actions/checkout@v4
 
+      # 用 npm 装 pnpm（npm 随 Node 预装在 runner 上），不依赖第三方 action。
+      # 版本与 package.json 的 packageManager 字段保持一致。
+      # 必须在 setup-node 之前跑：setup-node 的 cache: pnpm 需要 PATH 里已经有 pnpm，
+      # 否则会直接以 "Unable to locate executable file: pnpm" 失败。
+      - name: 安装 pnpm
+        run: npm install --global pnpm@11.22.0
+
       - name: 安装 Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: pnpm
-
-      - name: 安装 pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          run_install: false
 
       # 由 GitHub 自己算出站点地址与子路径：
       # 用户主页仓库得到 base=/ ，普通仓库得到 base=/仓库名 ，配置了自定义域名则是 /
