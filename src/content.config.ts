@@ -27,6 +27,11 @@ const posts = defineCollection({
     draft: z.boolean().default(false),
     /** true 时可出现在首页「精选」位 */
     featured: z.boolean().default(false),
+    /**
+     * 列表卡片上的封面图，可选。放 public/ 下，如 "/images/posts/cover.png"。
+     * 不填时卡片自动退回纯文字排布，不会留空位。
+     */
+    image: z.string().optional(),
   }),
 });
 

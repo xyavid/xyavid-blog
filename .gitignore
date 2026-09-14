@@ -7,6 +7,9 @@ dist/
 .env
 .env.production
 
+# 参考主题仓库（本地对照用，不纳入版本管理）
+.ref/
+
 # 编辑器与系统
 .DS_Store
 Thumbs.db

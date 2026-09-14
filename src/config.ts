@@ -15,10 +15,54 @@ export const SITE = {
   author: "xyavid",
   lang: "zh-CN",
   /**
-   * 主题强调色相（0-360）。整站只有这一个强调色，其余都是中性灰阶。
-   * 250≈蓝紫，200≈青蓝，160≈青绿，30≈暖橙，350≈玫红。
+   * 个人卡片上的头像。放 public/ 下填 "/images/avatar.png"；
+   * 留空则用作者名首字生成一个字母头像，不会出现裂图。
    */
-  themeHue: 250,
+  avatar: "",
+  /** 站点建立时间（"2026-03" 或 "2026-03-15"），侧栏统计里用来算「运行了多久」 */
+  startDate: "2026-03",
+} as const;
+
+/**
+ * 主题色。整站只有一个强调色变量 --hue，改一个数字即可换色。
+ * 250≈蓝紫，200≈青蓝，165≈青绿，30≈暖橙，350≈玫红。
+ */
+export const THEME = {
+  /** 默认色相，0-360 */
+  hue: 250,
+  /** 是否允许访客用页头滑杆自己调色（只存在访客本地，不影响其他人） */
+  allowPicker: true,
+} as const;
+
+/** 侧栏。首页、文章列表、归档、分类、标签、项目等列表页共用。 */
+export const SIDEBAR = {
+  /** 关掉后全站退回单栏，正文宽度自动放宽 */
+  enable: true,
+  /**
+   * true 侧栏在左，false 在右。
+   * 文章详情页不受这里影响：那里固定是「正文 + 右侧目录」。
+   */
+  position: "left" as "left" | "right",
+  /**
+   * 侧栏里显示哪些卡片、按什么顺序。删掉一项即不显示。
+   * profile 个人卡片 / stats 站内统计 / categories 分类 / tags 标签
+   */
+  widgets: ["profile", "stats", "categories", "tags"] as const,
+  /** 标签云最多显示几个，0 表示不限 */
+  tagLimit: 20,
+} as const;
+
+/** 零散的界面开关 */
+export const UI = {
+  /** 滚到一定距离后右下角出现「回到顶部」 */
+  backToTop: true,
+  /** 文章列表顶部显示分类快捷条 */
+  categoryBar: true,
+  /**
+   * 归档页每年是否可折叠。true 时只展开最新一年。
+   * 用原生 <details> 实现，不需要 JavaScript。
+   */
+  foldArchiveYears: true,
 } as const;
 
 /** 顶部导航。顺序即显示顺序。 */
