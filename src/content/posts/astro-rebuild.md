@@ -1,14 +1,14 @@
 ---
 title: 用 Astro 重建个人站
 description: 从选型到内容组织，记录这次重建的几个决定，以及被否掉的方案。
-pubDate: 2026-09-10
-updatedDate: 2026-09-12
+published: 2026-09-10
+updated: 2026-09-12
 category: 技术
 tags:
   - Astro
   - 建站
   - 前端
-featured: true
+pinned: true
 ---
 
 上一个博客是四年前用现成主题搭的，配置项改了三十多处，最后还是有一半功能从来没用过。这次重建，第一条原则就是：不引入用不到的东西。

@@ -1,11 +1,11 @@
 ---
 title: 开篇：为什么还要写博客
 description: 在算法推荐之外，给自己留一块可以慢慢写、慢慢改的地方。
-pubDate: 2026-09-12
+published: 2026-09-12
 category: 随笔
 tags:
   - 写作
-featured: false
+pinned: false
 ---
 
 我在纸上、备忘录里写过不少东西，最后大多散掉了。开一个博客，说到底是给这些零散的想法找一个固定的落点。

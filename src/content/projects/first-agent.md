@@ -1,19 +1,23 @@
 ---
-name: first-agent
-tagline: 面向本地 workspace 的多智能体工程助手，规划、研究、实现、验证四个阶段接力推进。
-description: MokioClaw 是一个多智能体工程助手，用 LangGraph 把任务拆成规划、研究、实现、验证几个阶段，可在终端或 TUI 中运行，文件与命令操作都被限制在显式 workspace 内。
-stack:
-  - Python
-  - LangGraph
-  - Textual
-  - uv
-status: active
-startDate: 2026-08
-links:
-  repo: https://github.com/xyavid/first-agent
-featured: true
+title: "first-agent"
+published: 2026-08-01
+draft: false
 order: 1
+description: "面向本地 workspace 的多智能体工程助手，规划、研究、实现、验证四个阶段接力推进。"
+image: ""
+tags:
+  - "Python"
+  - "LangGraph"
+  - "Textual"
+  - "uv"
+  - "active"
+link:
+  - label: "源码仓库"
+    icon: "fa7-brands:github"
+    value: "https://github.com/xyavid/first-agent"
+status: "developing"
 ---
+面向本地 workspace 的多智能体工程助手，规划、研究、实现、验证四个阶段接力推进。
 
 跟着 [木乔_mokio 的开源 agent 教程](https://github.com/Wood-Q/MokioAgent/tree/master) 一路写下来的多智能体工程助手，仓库里的项目名是 MokioClaw。
 

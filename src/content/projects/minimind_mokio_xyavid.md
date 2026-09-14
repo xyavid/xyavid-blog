@@ -1,19 +1,23 @@
 ---
-name: minimind_mokio_xyavid
-tagline: 从零手写并预训练一个小型语言模型，把 Transformer 的每个参数弄明白。
-description: 跟着教程从零实现的 MiniMind 风格小模型：自定义 Transformer 配置（GQA、RoPE、可选 MoE）、语料处理与预训练脚本，用 PyTorch 跑通完整的预训练流程。
-stack:
-  - Python
-  - PyTorch
-  - Transformers
-  - uv
-status: active
-startDate: 2026-08
-links:
-  repo: https://github.com/xyavid/minimind_mokio_xyavid
-featured: true
+title: "minimind_mokio_xyavid"
+published: 2026-08-01
+draft: false
 order: 2
+description: "从零手写并预训练一个小型语言模型，把 Transformer 的每个参数弄明白。"
+image: ""
+tags:
+  - "Python"
+  - "PyTorch"
+  - "Transformers"
+  - "uv"
+  - "active"
+link:
+  - label: "源码仓库"
+    icon: "fa7-brands:github"
+    value: "https://github.com/xyavid/minimind_mokio_xyavid"
+status: "developing"
 ---
+从零手写并预训练一个小型语言模型，把 Transformer 的每个参数弄明白。
 
 跟着教程从零实现的小型语言模型。目的不是刷指标，而是把「预训练到底发生了什么」这件事弄明白。
 

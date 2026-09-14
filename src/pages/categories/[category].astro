@@ -1,40 +1,81 @@
 ---
-import PostList from "../../components/PostList.astro";
-import SectionHeading from "../../components/SectionHeading.astro";
-import { CATEGORIES } from "../../config";
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import { getPublishedPosts } from "../../utils/content";
-import { withBase } from "../../utils/url";
+/**
+ * /categories/<分类>/ —— 某个分类下的全部文章。
+ *
+ * Firefly 原版把分类筛选做成归档页的 ?category= 查询串，
+ * 这里补回静态路径，原因和标签页一样：原站就是这些 URL，旧链接不能失效。
+ */
+import type { GetStaticPaths } from "astro";
+import { Icon } from "astro-icon/components";
+import PostCard from "@/components/layout/PostCard.astro";
+import { siteConfig } from "@/config";
+import I18nKey from "@/i18n/i18nKey";
+import { i18n } from "@/i18n/translation";
+import MainGridLayout from "@/layouts/MainGridLayout.astro";
+import { getCategoryList, getSortedPosts } from "@/utils/content-utils";
+import { getCategoryUrl, getPostUrlBySlug, removeFileExtension } from "@/utils/url-utils";
 
-export async function getStaticPaths() {
-  const posts = await getPublishedPosts();
-  // 只给有文章的分类生成页面，避免出现空页面
-  return CATEGORIES.filter((category) =>
-    posts.some((post) => post.data.category === category)
-  ).map((category) => ({
-    params: { category },
-    props: {
-      category,
-      posts: posts.filter((post) => post.data.category === category),
-    },
-  }));
-}
+export const getStaticPaths = (async () => {
+	const posts = await getSortedPosts();
+	const categories = await getCategoryList();
+
+	return categories.map((category) => ({
+		params: { category: category.name },
+		props: {
+			category: category.name,
+			posts: posts.filter((post) => (post.data.category ?? "").trim() === category.name),
+		},
+	}));
+}) satisfies GetStaticPaths;
 
 const { category, posts } = Astro.props;
+const len = posts.length;
 ---
 
-<BaseLayout
-  title={`分类：${category}`}
-  description={`分类「${category}」下的全部文章，共 ${posts.length} 篇。`}
+<MainGridLayout
+  title={`${i18n(I18nKey.categories)}：${category}`}
+  description={`分类「${category}」下的全部文章，共 ${len} 篇。`}
 >
-  <SectionHeading title={`分类：${category}`} count={posts.length} />
-  <PostList posts={posts} hideCategory />
-  <div class="mt-10">
-    <a
-      href={withBase("categories/")}
-      class="text-sm text-muted transition-colors hover:text-accent"
-    >
-      ← 返回全部分类
-    </a>
+  <div class="card-base px-8 py-6 mb-4">
+    <div class="flex items-center gap-3">
+      <Icon name="material-symbols:folder-open" class="text-3xl text-(--primary)" />
+      <div>
+        <h1 class="text-2xl font-bold text-(--primary)">{category}</h1>
+        <p class="text-30 text-sm mt-1">
+          {len} {i18n(I18nKey.postsCount)}
+        </p>
+      </div>
+    </div>
   </div>
-</BaseLayout>
+
+  <div class="flex flex-col gap-4 mb-4">
+    {
+      posts.map((post, index) => (
+        <PostCard
+          entry={post}
+          title={post.data.title}
+          tags={post.data.tags}
+          category={post.data.category}
+          published={post.data.published}
+          updated={post.data.updated}
+          url={getPostUrlBySlug(removeFileExtension(post.id))}
+          image={post.data.image}
+          description={post.data.description}
+          draft={post.data.draft}
+          pinned={post.data.pinned}
+          loading={index < 2 ? "eager" : "lazy"}
+          class:list="onload-animation"
+          style={`animation-delay: calc(var(--content-delay) + ${index * 50}ms);`}
+        />
+      ))
+    }
+  </div>
+
+  <a
+    href={getCategoryUrl(null)}
+    class="btn-regular rounded-lg h-10 gap-2 px-4 text-sm font-medium mx-auto"
+  >
+    <Icon name="material-symbols:arrow-back-rounded" class="text-lg" />
+    {i18n(I18nKey.categories)}
+  </a>
+</MainGridLayout>

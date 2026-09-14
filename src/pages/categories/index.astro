@@ -1,34 +1,69 @@
 ---
-import SectionHeading from "../../components/SectionHeading.astro";
-import { CATEGORIES } from "../../config";
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import { countByCategory, getPublishedPosts } from "../../utils/content";
-import { withBase } from "../../utils/url";
+import { Icon } from "astro-icon/components";
+import I18nKey from "@/i18n/i18nKey";
+import { i18n } from "@/i18n/translation";
+import MainGridLayout from "@/layouts/MainGridLayout.astro";
+import { getCategoryList } from "@/utils/content-utils";
 
-const posts = await getPublishedPosts();
-// 只列出确实有文章的分类：空分类不生成页面，列出来会变成死链
-const categories = countByCategory(posts, CATEGORIES).filter((item) => item.count > 0);
+const categories = await getCategoryList();
+const totalPosts = categories.reduce((sum, cat) => sum + cat.count, 0);
 ---
 
-<BaseLayout title="分类" description="按主题浏览文章。">
-  <SectionHeading title="分类" description="分类是固定的几个，每篇文章归属其中一个。" />
-  {
-    categories.length === 0 ? (
-      <p class="rounded-xl border border-dashed border-line px-5 py-12 text-center text-sm text-muted">
-        还没有任何分类下的文章。
-      </p>
-    ) : (
-      <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {categories.map(({ category, count }) => (
-          <a
-            href={withBase(`categories/${encodeURIComponent(category)}/`)}
-            class="group flex items-center justify-between rounded-xl border border-line px-4 py-3.5 transition-colors hover:border-accent/50"
-          >
-            <span class="text-sm font-medium transition-colors group-hover:text-accent">{category}</span>
-            <span class="text-xs text-muted">{count} 篇</span>
-          </a>
-        ))}
-      </div>
-    )
-  }
-</BaseLayout>
+<MainGridLayout title={i18n(I18nKey.categories)}>
+    <!-- 页面标题 -->
+    <div class="card-base px-8 py-6 mb-4">
+        <div class="text-2xl font-bold text-(--primary) mb-2">
+            {i18n(I18nKey.categories)}
+        </div>
+        <p class="text-30 text-sm">
+            {i18n(I18nKey.allCategories)} · {totalPosts} {i18n(I18nKey.postsCount)}
+        </p>
+    </div>
+
+    <!-- 分类卡片列表 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+        {
+            categories.map((category, index) => (
+                <a
+                    href={category.url}
+                    class="card-base p-6 flex items-center gap-4 group onload-animation"
+                    style={`animation-delay: calc(var(--content-delay) + ${index * 50}ms);`}
+                >
+                    <div class="shrink-0 w-14 h-14 rounded-full bg-(--primary)/10 group-hover:bg-(--primary)/20 flex items-center justify-center transition-colors">
+                        <Icon
+                            name="material-symbols:folder-open"
+                            class="text-3xl text-(--primary)"
+                        />
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <h2 class="text-lg font-bold text-90 truncate group-hover:text-(--primary) transition-colors" title={category.name}>
+                            {category.name}
+                        </h2>
+                        <p class="text-sm text-30 mt-1 group-hover:text-(--primary)/60 transition-colors">
+                            {category.count} {i18n(I18nKey.postsCount)}
+                        </p>
+                    </div>
+                    <div class="shrink-0">
+                        <Icon
+                            name="material-symbols:chevron-right-rounded"
+                            class="text-2xl text-30 group-hover:text-(--primary) transition-colors "
+                        />
+                    </div>
+                </a>
+            ))
+        }
+    </div>
+
+    <!-- 空状态 -->
+    {
+        categories.length === 0 && (
+            <div class="card-base px-8 py-12 text-center">
+                <Icon
+                    name="material-symbols:folder-off"
+                    class="text-5xl text-30 mx-auto mb-4"
+                />
+                <p class="text-30">{i18n(I18nKey.noData)}</p>
+            </div>
+        )
+    }
+</MainGridLayout>

@@ -1,7 +1,7 @@
 ---
 title: 草稿示例：还没写完的一篇
 description: "这是一个 draft 为 true 的示例文章，用来验证草稿不会出现在线上。"
-pubDate: 2026-09-12
+published: 2026-09-12
 category: 笔记
 tags:
   - 示例

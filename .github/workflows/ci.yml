@@ -1,0 +1,54 @@
+name: 构建与检查
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# 同一分支上新的提交会取消上一次还在跑的检查
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    name: 类型与构建检查
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 安装 Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: 安装 pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: 安装依赖
+        run: pnpm install --frozen-lockfile
+
+      - name: 生成 Astro 类型
+        run: pnpm astro sync
+
+      - name: 类型检查
+        run: pnpm type-check
+
+      - name: 构建（含 Pagefind 索引）
+        run: pnpm build
+        env:
+          SITE_URL: https://xyavid.github.io
+          BASE_PATH: /xyavid-blog
+
+      - name: 死链自检
+        run: pnpm check:links
+        env:
+          BASE_PATH: /xyavid-blog

@@ -1,18 +1,22 @@
 ---
-name: dsh-prompt-polish
-tagline: DeepSeek Harness 输入框里的一键提示词润色按钮，草稿直接改写成可执行的提示词。
-description: DeepSeek Harness Web 插件：在输入框模型名旁加一个小星星按钮，一键把草稿改写成结构化的可执行提示词并写回；调用当前会话的模型，支持运行中取消与一键还原原文。
-stack:
-  - TypeScript
-  - React
-  - DSH 插件
-status: active
-startDate: 2026-09
-links:
-  repo: https://github.com/xyavid/dsh-prompt-polish
-featured: true
+title: "dsh-prompt-polish"
+published: 2026-09-01
+draft: false
 order: 3
+description: "DeepSeek Harness 输入框里的一键提示词润色按钮，草稿直接改写成可执行的提示词。"
+image: ""
+tags:
+  - "TypeScript"
+  - "React"
+  - "DSH 插件"
+  - "active"
+link:
+  - label: "源码仓库"
+    icon: "fa7-brands:github"
+    value: "https://github.com/xyavid/dsh-prompt-polish"
+status: "developing"
 ---
+DeepSeek Harness 输入框里的一键提示词润色按钮，草稿直接改写成可执行的提示词。
 
 给 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 的 Web 界面写的插件。输入框里原本只是一句随手记的草稿，点一下模型名旁边的小星星，就变成一条结构清楚、能直接交给 agent 执行的提示词。
 

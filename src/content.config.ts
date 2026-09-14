@@ -1,88 +1,143 @@
 import { defineCollection } from "astro:content";
+import type { CollectionConfig } from "astro/content/config";
 import { glob } from "astro/loaders";
-import { z } from "astro/zod";
-import { CATEGORIES, PROJECT_STATUS } from "./config";
+import { type ZodType, z } from "astro/zod";
 
-/**
- * 文章集合。字段写错或漏填会在构建时直接报错，不会等到线上才发现。
- * 新增文章：在 src/content/posts/ 下新建 .md 文件即可，其余页面自动更新。
- */
-const posts = defineCollection({
-  // 文章文件平铺在目录里（不再分子目录），文件名即 URL 中的 slug
-  loader: glob({ base: "./src/content/posts", pattern: "*.md" }),
-  schema: z.object({
-    /** 文章标题 */
-    title: z.string().min(1).max(120),
-    /** 列表页与 SEO 用的摘要，建议 40-120 字 */
-    description: z.string().min(1).max(300),
-    /** 发布日期 */
-    pubDate: z.coerce.date(),
-    /** 最后修改日期，可选，会在文章页显示「修订于」 */
-    updatedDate: z.coerce.date().optional(),
-    /** 分类：只能从 src/config.ts 的 CATEGORIES 里选 */
-    category: z.enum(CATEGORIES),
-    /** 标签：自由填写，建议每篇 1-4 个 */
-    tags: z.array(z.string()).default([]),
-    /** true 时只在本地开发可见，不进入构建产物 */
-    draft: z.boolean().default(false),
-    /** true 时可出现在首页「精选」位 */
-    featured: z.boolean().default(false),
-    /**
-     * 列表卡片上的封面图，可选。放 public/ 下，如 "/images/posts/cover.png"。
-     * 不填时卡片自动退回纯文字排布，不会留空位。
-     */
-    image: z.string().optional(),
-  }),
+type PostData = {
+	title: string;
+	published: Date;
+	updated?: Date;
+	draft: boolean;
+	description: string;
+	image: string;
+	tags: string[];
+	category: string | null;
+	lang: string;
+	pinned: boolean;
+	author: string;
+	sourceLink: string;
+	licenseName: string;
+	licenseUrl: string;
+	comment: boolean;
+	password: string;
+	passwordHint: string;
+	series: string;
+	seriesOrder?: number;
+	prevTitle: string;
+	prevSlug: string;
+	nextTitle: string;
+	nextSlug: string;
+};
+
+type DynamicData = {
+	published: Date;
+	pinned: boolean;
+	location: string;
+};
+
+type ProjectLink = {
+	label: string;
+	icon: string;
+	value: string;
+};
+
+type ProjectData = {
+	title: string;
+	published: Date;
+	draft: boolean;
+	order?: number;
+	description: string;
+	image: string;
+	tags: string[];
+	link: ProjectLink[];
+	status: string;
+	lang: string;
+};
+
+type ContentCollection<T> = CollectionConfig<
+	ZodType<T>,
+	ReturnType<typeof glob>
+>;
+
+const postsCollection: ContentCollection<PostData> = defineCollection({
+	loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/posts" }),
+	schema: z.object({
+		title: z.string(),
+		published: z.date(),
+		updated: z.date().optional(),
+		draft: z.boolean().optional().default(false),
+		description: z.string().optional().default(""),
+		image: z.string().optional().default(""),
+		tags: z.array(z.string()).optional().default([]),
+		category: z.string().optional().nullable().default(""),
+		lang: z.string().optional().default(""),
+		pinned: z.boolean().optional().default(false),
+		author: z.string().optional().default(""),
+		sourceLink: z.string().optional().default(""),
+		licenseName: z.string().optional().default(""),
+		licenseUrl: z.string().optional().default(""),
+		comment: z.boolean().optional().default(true),
+		password: z.string().optional().default(""),
+		passwordHint: z.string().optional().default(""),
+		series: z.string().optional().default(""),
+		seriesOrder: z.number().optional(),
+
+		/* For internal use */
+		prevTitle: z.string().default(""),
+		prevSlug: z.string().default(""),
+		nextTitle: z.string().default(""),
+		nextSlug: z.string().default(""),
+	}),
 });
 
-/**
- * 项目集合。一个项目一个文件，正文部分写详细介绍。
- */
-const projects = defineCollection({
-  // 同理，项目文件平铺，文件名即 slug
-  loader: glob({ base: "./src/content/projects", pattern: "*.md" }),
-  schema: z.object({
-    /** 项目名 */
-    name: z.string().min(1).max(80),
-    /** 一句话介绍，显示在卡片上 */
-    tagline: z.string().min(1).max(160),
-    /** 列表页与 SEO 用的描述 */
-    description: z.string().min(1).max(300),
-    /** 技术栈标签 */
-    stack: z.array(z.string()).default([]),
-    /** 状态：active 进行中 / completed 已完成 / archived 已归档 */
-    status: z.enum(Object.keys(PROJECT_STATUS) as [string, ...string[]]),
-    /** 开始时间，格式 "2026-03" */
-    startDate: z.string().regex(/^\d{4}(-\d{2})?$/, "格式应为 2026 或 2026-03"),
-    /** 结束时间，可选，格式同上 */
-    endDate: z.string().regex(/^\d{4}(-\d{2})?$/, "格式应为 2026 或 2026-03").optional(),
-    /** 外部链接，只需要填用得到的那个 */
-    links: z
-      .object({
-        repo: z.string().optional(),
-        demo: z.string().optional(),
-      })
-      .default({}),
-    /** 封面图路径（放 public/ 下，如 "/images/projects/cover.png"）；不填则显示占位块 */
-    cover: z.string().optional(),
-    /** true 时出现在首页精选 */
-    featured: z.boolean().default(false),
-    /** 项目列表排序，数字小的在前 */
-    order: z.number().default(99),
-  }),
+const specCollection: ContentCollection<Record<string, never>> =
+	defineCollection({
+		loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/spec" }),
+		schema: z.object({}),
+	});
+
+const dynamicCollection: ContentCollection<DynamicData> = defineCollection({
+	loader: glob({ pattern: "**/*.md", base: "./src/content/dynamic" }),
+	schema: z.object({
+		published: z.date(),
+		pinned: z.boolean().optional().default(false),
+		location: z.string().optional().default(""),
+	}),
 });
 
-/**
- * 「关于我」页面。正文写在 src/content/about.md 里，改内容不需要动代码。
- */
-const about = defineCollection({
-  // file() 装载器不认 Markdown 语法，所以这里仍用 glob 精确匹配单个文件
-  loader: glob({ base: "./src/content", pattern: "about.md" }),
-  schema: z.object({
-    title: z.string().default("关于我"),
-    description: z.string().default("关于这个站点和写它的人。"),
-    updatedDate: z.coerce.date().optional(),
-  }),
+const projectsCollection: ContentCollection<ProjectData> = defineCollection({
+	loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/projects" }),
+	schema: z.object({
+		title: z.string(),
+		published: z.date(),
+		draft: z.boolean().optional().default(false),
+		order: z.number().optional(),
+		description: z.string().optional().default(""),
+		image: z.string().optional().default(""),
+		tags: z.array(z.string()).optional().default([]),
+		link: z
+			.array(
+				z.object({
+					label: z.string(),
+					icon: z.string().optional().default(""),
+					value: z.string(),
+				}),
+			)
+			.optional()
+			.default([]),
+		status: z.string().optional().default(""),
+		lang: z.string().optional().default(""),
+	}),
 });
 
-export const collections = { posts, projects, about };
+export const collections: {
+	dynamic: typeof dynamicCollection;
+	posts: typeof postsCollection;
+	spec: typeof specCollection;
+	projects: typeof projectsCollection;
+} = {
+	dynamic: dynamicCollection,
+	posts: postsCollection,
+	spec: specCollection,
+	projects: projectsCollection,
+};

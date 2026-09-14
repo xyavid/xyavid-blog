@@ -1,0 +1,49 @@
+---
+/**
+ * /posts/ 文章列表（含分页）。
+ *
+ * Firefly 默认把分页列表放在站点根路径 /，本站原来用的是 /posts/ 与 /posts/page/N/。
+ * 这里保留原路径，避免已有链接失效：首页 / 由 src/pages/[...page].astro 负责，
+ * 两者渲染同一套 PostPage + Pagination 组件，只是标题与路径不同。
+ *
+ * 注意：文件必须是 [...page].astro 这种 rest 参数路由，
+ * Astro 的 paginate() 只会把 page 对象注入 rest 参数路由的 props。
+ */
+import type { GetStaticPaths } from "astro";
+import Pagination from "@/components/common/Pagination.astro";
+import PostPage from "@/components/layout/PostPage.astro";
+import { siteConfig } from "@/config";
+import I18nKey from "@/i18n/i18nKey";
+import { i18n } from "@/i18n/translation";
+import MainGridLayout from "@/layouts/MainGridLayout.astro";
+import { getSortedPosts } from "@/utils/content-utils";
+
+export const getStaticPaths = (async ({ paginate }) => {
+	const allBlogPosts = await getSortedPosts();
+	return paginate(allBlogPosts, { pageSize: siteConfig.pagination.postsPerPage });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+const len = page.data.length;
+const heading =
+	page.currentPage === 1
+		? i18n(I18nKey.postList)
+		: `${i18n(I18nKey.postList)} · ${page.currentPage}`;
+---
+
+<MainGridLayout
+  title={heading}
+  description={`${siteConfig.title} 的全部文章，按发布时间倒序排列。`}
+  heading={heading}
+>
+  <PostPage page={page} />
+  {
+    page.total > page.size && (
+      <Pagination
+        class="mx-auto onload-animation"
+        page={page}
+        style={`animation-delay: calc(var(--content-delay) + ${len * 50}ms)`}
+      />
+    )
+  }
+</MainGridLayout>
